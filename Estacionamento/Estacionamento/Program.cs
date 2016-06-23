@@ -18,6 +18,8 @@ namespace Estacionamento
             List<Funcionario> ListaDeFuncionarios = new List<Funcionario>();
             Carro ca = new Carro();
             List<Carro> ListaDeCarros = new List<Carro>();
+            Marca m = new Marca();
+            List<Marca> ListaDeMarcas = new List<Marca>();
             string opcao;
                      
 
@@ -121,11 +123,20 @@ namespace Estacionamento
                         break;
 
                     case "5":
-
+                       
                         ca = new Carro();
-                        Console.WriteLine("Cadastro de Carros");
-                        Console.WriteLine("Digite a Marca:");
-                       ca.Marca= Console.ReadLine();
+                        Console.WriteLine("Cadastro de Carros"); //excessão de cadastro com marca exixtente
+                          do
+                        {
+                            Console.WriteLine("Digite a Marca do Veiculo:");
+                            ca.Marca.Nome = Console.ReadLine();
+                            if (MarcaDAO.VerificaNome(m) == null)
+                            {
+                                Console.WriteLine("Marca não encontrada !!!");
+                            }
+                        } while (MarcaDAO.VerificaNome(m) == null);
+                        ca.Marca = MarcaDAO.VerificaNome(m);
+
                         Console.WriteLine("Digite o Modelo:");
                         ca.Modelo= Console.ReadLine();
                         Console.WriteLine("Digite a Placa:");

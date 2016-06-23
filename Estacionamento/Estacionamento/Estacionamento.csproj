@@ -64,6 +64,7 @@
     <Compile Include="DAL\CarroDAO.cs" />
     <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\FuncionarioDAO.cs" />
+    <Compile Include="DAL\MarcaDAO.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

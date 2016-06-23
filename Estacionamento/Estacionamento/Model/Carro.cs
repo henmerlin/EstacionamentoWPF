@@ -10,7 +10,7 @@ namespace Estacionamento.Model
     {
         public int Id { get; set; }
 
-        public string Marca { get; set; }
+        public Marca Marca { get; set; }
 
         public string Modelo { get; set; }
 

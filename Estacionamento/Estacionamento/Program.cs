@@ -125,7 +125,7 @@ namespace Estacionamento
                     case "5":
                        
                         ca = new Carro();
-                        Console.WriteLine("Cadastro de Carros"); //excessão de cadastro com marca exixtente
+                        Console.WriteLine("Cadastro de Carros"); //excessão de cadastro com marca exixtente 
                           do
                         {
                             Console.WriteLine("Digite a Marca do Veiculo:");

@@ -14,8 +14,6 @@ namespace Estacionamento.Model
 
         public string Cpf { get; set; }
 
-        
-
         public override string ToString()
         {
             return "Id: " + Id + "\nNome: " + Nome + "\nCpf: " + Cpf;

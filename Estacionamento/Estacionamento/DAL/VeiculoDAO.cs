@@ -12,7 +12,7 @@ namespace Estacionamento.DAL
         private static List<Veiculo> ListaDeCarros = new List<Veiculo>();       
 
 
-        public static bool AdicionarVeiculo(Veiculo ca)
+        public static bool AdicionarCarro(Veiculo ca)
         {
             if (VerificaPlaca(ca) == null)
             {

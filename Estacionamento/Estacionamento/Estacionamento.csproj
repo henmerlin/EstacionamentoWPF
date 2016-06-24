@@ -61,17 +61,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DAL\CarroDAO.cs" />
     <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\FuncionarioDAO.cs" />
     <Compile Include="DAL\MarcaDAO.cs" />
+    <Compile Include="DAL\VeiculoDAO.cs" />
+    <Compile Include="Model\Veiculo.cs" />
     <Compile Include="View\Principal.xaml.cs">
       <DependentUpon>Principal.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Carro.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Marca.cs" />

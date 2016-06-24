@@ -14,11 +14,13 @@ namespace Estacionamento.Model
 
         public string Modelo { get; set; }
 
+        public string Tipo { get; set; }
+
         public string Placa { get; set; }
 
         public override string ToString()
         {
-            return "Id: " + Id + "\nMarca: " + Marca + "\nModelo: " + Modelo + "\nPlaca:" +Placa;
+            return "Id: " + Id + "\nMarca: " + Marca + "\nModelo: " + Modelo + "\nTipo: "+ Tipo+"\nPlaca:" +Placa;
         }
     }
 }

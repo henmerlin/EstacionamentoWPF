@@ -10,5 +10,7 @@ namespace Estacionamento.Model
     {
         public string tamanho { get; set; }
 
+
+
     }
 }

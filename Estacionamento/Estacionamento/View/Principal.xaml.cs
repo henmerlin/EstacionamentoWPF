@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Estacionamento
+namespace Estacionamento.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Principal : Window
     {
-        public MainWindow()
+        public Principal()
         {
             InitializeComponent();
         }

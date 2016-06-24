@@ -53,7 +53,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="View\MainWindow.xaml">
+    <Page Include="View\Principal.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -65,8 +65,8 @@
     <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\FuncionarioDAO.cs" />
     <Compile Include="DAL\MarcaDAO.cs" />
-    <Compile Include="View\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="View\Principal.xaml.cs">
+      <DependentUpon>Principal.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -76,7 +76,6 @@
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Marca.cs" />
     <Compile Include="Model\Vaga.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

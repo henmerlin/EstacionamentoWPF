@@ -7,12 +7,12 @@ using Estacionamento.Model;
 
 namespace Estacionamento.DAL
 {
-    class CarroDAO
+    class VeiculoDAO
     {
-        private static List<Carro> ListaDeCarros = new List<Carro>();       
+        private static List<Veiculo> ListaDeCarros = new List<Veiculo>();       
 
 
-        public static bool AdicionarCarro(Carro ca)
+        public static bool AdicionarVeiculo(Veiculo ca)
         {
             if (VerificaPlaca(ca) == null)
             {
@@ -25,7 +25,7 @@ namespace Estacionamento.DAL
             }
         }
 
-        public static List<Carro> RetornarLista()
+        public static List<Veiculo> RetornarLista()
         {
 
             return ListaDeCarros;
@@ -33,10 +33,10 @@ namespace Estacionamento.DAL
         }
 
 
-        public static Carro VerificaPlaca(Carro ca)
+        public static Veiculo VerificaPlaca(Veiculo ca)
         {
 
-            foreach (Carro carroCadastrado in CarroDAO.RetornarLista())
+            foreach (Veiculo carroCadastrado in VeiculoDAO.RetornarLista())
             {
                 if (ca.Placa.Equals(carroCadastrado.Placa))
                 {

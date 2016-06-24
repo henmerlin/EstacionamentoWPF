@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Estacionamento.Model;
 
 namespace Estacionamento.DAL
 {
-    class VAgaDAO
+    class VagaDAO
     {
         private static List<Vaga> ListaDeVagas = new List<Vaga>();
-
 
     }
 }

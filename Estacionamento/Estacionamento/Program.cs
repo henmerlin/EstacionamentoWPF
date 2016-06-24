@@ -16,8 +16,8 @@ namespace Estacionamento
             List<Cliente> ListaDeClientes = new List<Cliente>();
             Funcionario f = new Funcionario();
             List<Funcionario> ListaDeFuncionarios = new List<Funcionario>();
-            Carro ca = new Carro();
-            List<Carro> ListaDeCarros = new List<Carro>();
+            Veiculo ca = new Veiculo();
+            List<Veiculo> ListaDeCarros = new List<Veiculo>();
             Marca m = new Marca();
             List<Marca> ListaDeMarcas = new List<Marca>();
             string opcao;
@@ -124,7 +124,7 @@ namespace Estacionamento
 
                     case "5":
                        
-                        ca = new Carro();
+                        ca = new Veiculo();
                         Console.WriteLine("Cadastro de Carros"); //excessão de cadastro com marca exixtente 
                           do
                         {
@@ -141,25 +141,25 @@ namespace Estacionamento
                         ca.Modelo= Console.ReadLine();
                         Console.WriteLine("Digite a Placa:");
                         ca.Placa = Console.ReadLine();
-                        if (CarroDAO.AdicionarCarro(ca))
+                        if (VeiculoDAO.AdicionarVeiculo(ca))
                         {
 
                             Console.WriteLine("Carro cadastrado com sucesso!!!");
                         }
                         else
                         {
-                            CarroDAO carroDAO = new CarroDAO();
-                            CarroDAO.AdicionarCarro(ca);
+                            VeiculoDAO carroDAO = new VeiculoDAO();
+                            VeiculoDAO.AdicionarVeiculo(ca);
                             Console.WriteLine("Carro já cadastrado!!!");
                         }
 
                         break;
 
                     case "6":
-                        if (CarroDAO.RetornarLista().Count > 0)
+                        if (VeiculoDAO.RetornarLista().Count > 0)
                         {
                             Console.WriteLine("Visualização de Carros");
-                            foreach (Carro carroCadastrado in CarroDAO.RetornarLista())
+                            foreach (Veiculo carroCadastrado in VeiculoDAO.RetornarLista())
                             {
                                 Console.WriteLine(carroCadastrado);
                                 Console.WriteLine("");

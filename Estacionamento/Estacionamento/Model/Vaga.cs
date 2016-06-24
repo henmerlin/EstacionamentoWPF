@@ -9,13 +9,15 @@ namespace Estacionamento.Model
 {
     class Vaga
     {
-        public string tamanho { get; set; }
+       
+        public  int Id { get; set; }
 
-        public Cliente Cliente { get; set; }
+        public string Referencia { get; set; }
 
-    public Funcionario Funcionario { get; set; }
+        public override string ToString()
+        {
+            return "ID: "+ Id+"\nReferência: "+Referencia;
+        }
 
-    public List<Veiculo> ListaDeVeiculos { get; set; }
-
-}
+    }
 }

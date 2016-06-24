@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Estacionamento.DAL
 {
     class VAgaDAO
     {
+        private static List<Vaga> ListaDeVagas = new List<Vaga>();
+
 
     }
 }

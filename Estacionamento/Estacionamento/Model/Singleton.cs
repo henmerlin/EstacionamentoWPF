@@ -5,7 +5,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Estacionamento.Model
+namespace Estacionamento.DAL
 {
     class Singleton
     {

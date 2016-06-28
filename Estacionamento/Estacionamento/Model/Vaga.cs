@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Estacionamento.Model;
+using Estacionamento.DAL;
 
-namespace Estacionamento.Model
+namespace Estacionamento.DAL
 {
     class Vaga
     {

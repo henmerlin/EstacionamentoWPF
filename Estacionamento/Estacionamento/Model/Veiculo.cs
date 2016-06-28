@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Estacionamento.Model
+namespace Estacionamento.DAL
 {
     class Veiculo
     {

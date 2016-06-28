@@ -4,13 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Estacionamento.Model;
+using System.Runtime.Remoting.Contexts;
 
 namespace Estacionamento.DAL
 {
     class VeiculoDAO
     {
-        private static List<Veiculo> ListaDeCarros = new List<Veiculo>();       
 
+        private static Context ctx = Singleton.Instance.Context;
+
+        private static List<Veiculo> ListaDeCarros = new List<Veiculo>();       
 
         public static bool AdicionarCarro(Veiculo ca)
         {

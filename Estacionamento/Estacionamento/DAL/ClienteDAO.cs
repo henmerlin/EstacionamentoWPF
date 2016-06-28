@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Estacionamento.Model;
+using System.Runtime.Remoting.Contexts;
 
 namespace Estacionamento.DAL
 {
     class ClienteDAO
     {
+        private static Context ctx = Singleton.Instance.Context;
+
         private static List<Cliente> listaDeClientes = new List<Cliente>();
 
 

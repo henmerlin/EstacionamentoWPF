@@ -9,7 +9,12 @@ namespace Estacionamento.DAL
 {
     class FuncionarioDAO
     {
+
+        private static Context ctx = Singleton.Instance.Context;
+
         private static List<Funcionario> ListaDeFuncionario = new List<Funcionario>();
+
+
         public static bool AdicionarFuncionario(Funcionario f)
         {
             if (VerificaCPF(f) == null)

@@ -4,15 +4,21 @@
         Title="Principal" Height="350" Width="750" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen">
     <Grid>
         <Menu HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="750" Grid.ColumnSpan="2" MinWidth="20" Margin="0,0,-16,0">
-            <MenuItem Header="Clientes">
+            <MenuItem Header="Cadastros">
+                <MenuItem Header="Clientes" HorizontalAlignment="Left" Width="160" Click="AbrirWindowCliente"/>
+                <MenuItem Header="Vagas" HorizontalAlignment="Left" Width="160"/>
+            </MenuItem>
+           
+            <MenuItem Header="Funcionários">
                 <MenuItem Header="Cadastrar" HorizontalAlignment="Left" Width="160"/>
                 <MenuItem Header="Listar" HorizontalAlignment="Left" Width="160"/>
             </MenuItem>
-            
-            <MenuItem Header="Vagas">
+
+            <MenuItem Header="Veículo">
                 <MenuItem Header="Cadastrar" HorizontalAlignment="Left" Width="160"/>
                 <MenuItem Header="Listar" HorizontalAlignment="Left" Width="160"/>
             </MenuItem>
+
 
         </Menu>
     </Grid>

@@ -10,30 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Estacionamento.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Clientes.xaml
     /// </summary>
-    public partial class Principal : Window
+    public partial class Clientes : Window
     {
-        public Principal()
+        public Clientes()
         {
             InitializeComponent();
         }
-
-        private void AbrirWindowCliente(object sender, RoutedEventArgs e)
-        {
-
-            Window form = new Clientes();
-            form.ShowDialog();
-        }
-
-
-
-
     }
 }

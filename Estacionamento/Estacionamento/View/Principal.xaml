@@ -9,7 +9,7 @@
                 <MenuItem Header="Vagas" HorizontalAlignment="Left" Width="160"/>
             </MenuItem>
            
-            <MenuItem Header="Funcionários">
+            <MenuItem Header="Funcionários" Click="Cadastro_Funcionario">
                 <MenuItem Header="Cadastrar" HorizontalAlignment="Left" Width="160"/>
                 <MenuItem Header="Listar" HorizontalAlignment="Left" Width="160"/>
             </MenuItem>

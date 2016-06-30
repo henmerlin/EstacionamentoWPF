@@ -14,10 +14,5 @@ namespace Estacionamento.DAL
         public Modelo Modelo { get; set; }
         
         public string Placa { get; set; }
-
-        public override string ToString()
-        {
-            return "Id: " + Id + "\nMarca: " + Marca + "\nModelo: " + Modelo + "\nTipo: "+ Tipo+"\nPlaca:" +Placa;
-        }
     }
 }

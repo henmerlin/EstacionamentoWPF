@@ -82,12 +82,19 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Modelo.cs" />
+    <Compile Include="View\Funcionarios.xaml.cs">
+      <DependentUpon>Funcionarios.xaml</DependentUpon>
+    </Compile>
     <Compile Include="_Estacionamento_DAL_ContextDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
     </Compile>
     <Page Include="View\Clientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Funcionarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

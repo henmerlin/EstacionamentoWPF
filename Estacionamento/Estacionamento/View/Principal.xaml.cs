@@ -34,8 +34,6 @@ namespace Estacionamento.View
 
         private void AbrirWindowFuncionario(object sender, RoutedEventArgs e)
         {
-            Window form = new Funcionarios();
-            form.ShowDialog();
         }
 
         private void Cadastro_Funcionario(object sender, RoutedEventArgs e)

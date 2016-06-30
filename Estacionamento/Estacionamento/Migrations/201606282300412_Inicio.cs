@@ -14,6 +14,7 @@ namespace Estacionamento.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Nome = c.String(),
                         Cpf = c.String(),
+                        
                     })
                 .PrimaryKey(t => t.Id);
             

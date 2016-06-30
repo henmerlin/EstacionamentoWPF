@@ -3,10 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Clientes" Height="300" Width="300" WindowStartupLocation="CenterScreen" Topmost="True">
     <Grid>
+        <TextBox x:Name="txtCpBusca" HorizontalAlignment="Left" Height="23" Margin="48,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
         <Label Content="CPF:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="48,13,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="234"/>
-        <Button Content="Buscar" HorizontalAlignment="Left" Margin="207,41,0,0" VerticalAlignment="Top" Width="75"/>
-        <Separator HorizontalAlignment="Left" Height="100" Margin="10,27,0,0" VerticalAlignment="Top" Width="272"/>
+        <Separator HorizontalAlignment="Left" Height="16" Margin="10,41,0,0" VerticalAlignment="Top" Width="272"/>
+        <Button x:Name="btnBuscarCliente" Content="Buscar" HorizontalAlignment="Left" Margin="207,14,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cadastrar" HorizontalAlignment="Left" Margin="207,238,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="pt-br" Text="Nome:"/></TextBlock>
 
     </Grid>
 </Window>

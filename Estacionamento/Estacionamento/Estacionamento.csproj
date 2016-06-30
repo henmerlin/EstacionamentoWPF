@@ -82,10 +82,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Modelo.cs" />
-    <Compile Include="_Estacionamento_DAL_ContextDataSet.Designer.cs">
+    <Compile Include="DAL\dsBanco.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
+      <DependentUpon>dsBanco.xsd</DependentUpon>
     </Compile>
     <Page Include="View\Clientes.xaml">
       <SubType>Designer</SubType>
@@ -150,16 +150,16 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="_Estacionamento_DAL_ContextDataSet.xsc">
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
+    <None Include="DAL\dsBanco.xsc">
+      <DependentUpon>dsBanco.xsd</DependentUpon>
     </None>
-    <None Include="_Estacionamento_DAL_ContextDataSet.xsd">
+    <None Include="DAL\dsBanco.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_Estacionamento_DAL_ContextDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsBanco.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_Estacionamento_DAL_ContextDataSet.xss">
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
+    <None Include="DAL\dsBanco.xss">
+      <DependentUpon>dsBanco.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

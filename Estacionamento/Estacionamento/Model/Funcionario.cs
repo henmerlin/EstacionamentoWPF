@@ -14,9 +14,11 @@ namespace Estacionamento.DAL
 
         public string Cpf { get; set; }
 
+        public string Telefone { get; set; }
+
         public override string ToString()
         {
-            return "Id: " + Id + "\nNome: " + Nome + "\nCpf: " + Cpf;
+            return "Id: " + Id + "\nNome: " + Nome + "\nCpf: " + Cpf + "\nTelefone: "+Telefone;
         }
     }
 }

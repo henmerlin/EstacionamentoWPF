@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Estacionamento {
+namespace Estacionamento.DAL {
     
     
     /// <summary>
@@ -1959,7 +1959,7 @@ namespace Estacionamento {
         }
     }
 }
-namespace Estacionamento._Estacionamento_DAL_ContextDataSetTableAdapters {
+namespace Estacionamento.DAL._Estacionamento_DAL_ContextDataSetTableAdapters {
     
     
     /// <summary>

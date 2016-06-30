@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Estacionamento.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,10 +11,8 @@ namespace Estacionamento.DAL
 
         public Marca Marca { get; set; }
 
-        public string Modelo { get; set; }
-
-        public string Tipo { get; set; }
-
+        public Modelo Modelo { get; set; }
+        
         public string Placa { get; set; }
 
         public override string ToString()

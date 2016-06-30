@@ -51,5 +51,33 @@ namespace Estacionamento.DAL
             return null;
 
         }
+
+        public static bool RemoverFuncionario(Funcionario f)
+        {
+            try
+            {
+                ctx.Funcionarios.Remove(f);
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public static bool AlterarFuncionario(Funcionario f)
+        {
+            try
+            {
+                ctx.Entry(f).State = System.Data.Entity.EntityState.Modified;
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return true;
+            }
+        }
     }
 }

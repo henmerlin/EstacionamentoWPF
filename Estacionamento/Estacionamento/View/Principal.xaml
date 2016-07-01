@@ -10,7 +10,7 @@
             </MenuItem>
            
             <MenuItem Header="Funcionários" Click="Cadastro_Funcionario">
-                <MenuItem Header="Cadastrar" HorizontalAlignment="Left" Width="160"/>
+                <MenuItem Header="Cadastrar" HorizontalAlignment="Left" Width="160" Click="Cadastro_Funcionario"/>
                 <MenuItem Header="Listar" HorizontalAlignment="Left" Width="160"/>
             </MenuItem>
 

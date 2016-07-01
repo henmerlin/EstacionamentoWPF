@@ -13,18 +13,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Estacionamento.DAL;
 using Estacionamento.Model;
-namespace WpfVendas.Views
+namespace Estacionamento.Views
 {
     /// <summary>
-    /// Interaction logic for frmCadastroCliente.xaml
+    /// Interaction logic for Funcionarios.xaml
     /// </summary>
     /// 
-    public partial class frmCadastroCliente : Window
+    public partial class Funcionarios : Window
     {
 
         private Funcionario f = new Funcionario();
 
-        public frmCadastroCliente()
+        public frmCadastroFuncionario()
         {
             InitializeComponent();
         }

@@ -19,7 +19,7 @@ namespace Estacionamento.View
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            // nomeDaDbSet ou nome da TableAdapter.Fill(nomeDaDataTable);
             this.reportViewer1.RefreshReport();
         }
     }

@@ -6,16 +6,14 @@
         <Menu HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="750" Grid.ColumnSpan="2" MinWidth="20" Margin="0,0,-16,0">
             <MenuItem Header="Cadastros">
                 <MenuItem Header="Clientes" HorizontalAlignment="Left" Width="160" Click="AbrirWindowCliente"/>
+                <Separator HorizontalAlignment="Left"  Width="160"/>
+                <MenuItem Header="Marcas" HorizontalAlignment="Left" Width="160"/>
+                <MenuItem Header="Modelos" HorizontalAlignment="Left" Width="160"/>
+                <Separator HorizontalAlignment="Left"  Width="160"/>
                 <MenuItem Header="Vagas" HorizontalAlignment="Left" Width="160"/>
             </MenuItem>
-           
-            <MenuItem Header="Funcionários" Click="Cadastro_Funcionario">
-                <MenuItem Header="Cadastrar" HorizontalAlignment="Left" Width="160" Click="Cadastro_Funcionario"/>
-                <MenuItem Header="Listar" HorizontalAlignment="Left" Width="160"/>
-            </MenuItem>
 
-            <MenuItem Header="Veículo">
-                <MenuItem Header="Cadastrar" HorizontalAlignment="Left" Width="160"/>
+            <MenuItem Header="Relatórios">
                 <MenuItem Header="Listar" HorizontalAlignment="Left" Width="160"/>
             </MenuItem>
 

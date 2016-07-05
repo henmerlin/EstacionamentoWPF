@@ -15,40 +15,57 @@ namespace Estacionamento.DAL
 
         public static bool AdicionarCliente(Cliente c)
         {
-            if (VerificaCPF(c) == null)
+            try
             {
-                listaDeClientes.Add(c);
+                ctx.Clientes.Add(c);
+                ctx.SaveChanges();
                 return true;
             }
-            else
+            catch (Exception)
             {
                 return false;
             }
         }
 
+        public static Cliente VerificarClientePorCPF(Cliente c)
+        {
+            return ctx.Clientes.FirstOrDefault(x => x.Cpf.Equals(c.Cpf));
+        }
+
         public static List<Cliente> RetornarLista()
         {
-
-            return listaDeClientes;
-            
+            //return listaDeClientes;
+            return ctx.Clientes.ToList();
         }
 
-
-        public static Cliente VerificaCPF(Cliente c)
+        public static bool RemoverCliente(Cliente c)
         {
-
-            foreach (Cliente clienteCadastrado in ClienteDAO.RetornarLista())
+            try
             {
-                if (c.Cpf.Equals(clienteCadastrado.Cpf))
-                {
-                    return clienteCadastrado;
-
-                }
+                ctx.Clientes.Remove(c);
+                ctx.SaveChanges();
+                return true;
             }
-
-            return null;
-
+            catch (Exception)
+            {
+                return false;
+            }
         }
+
+        public static bool AlterarCliente(Cliente c)
+        {
+            try
+            {
+                ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return true;
+            }
+        }
+
     }
 }
 

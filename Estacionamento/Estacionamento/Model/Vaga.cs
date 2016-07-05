@@ -14,10 +14,5 @@ namespace Estacionamento.DAL
 
         public string Referencia { get; set; }
 
-        public override string ToString()
-        {
-            return "ID: "+ Id+"\nReferência: "+Referencia;
-        }
-
     }
 }

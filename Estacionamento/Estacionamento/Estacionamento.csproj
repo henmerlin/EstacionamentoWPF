@@ -114,6 +114,7 @@
       <DependentUpon>201606282300412_Inicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Servico.cs" />
     <Compile Include="Model\Singleton.cs" />
     <Compile Include="Model\Veiculo.cs" />
     <Compile Include="View\Clientes.xaml.cs">

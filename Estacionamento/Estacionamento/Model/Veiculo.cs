@@ -9,10 +9,12 @@ namespace Estacionamento.DAL
     {
         public int Id { get; set; }
 
-        public Marca Marca { get; set; }
-
         public Modelo Modelo { get; set; }
-        
+
+        public Cliente Cliente { get; set; }
+
         public string Placa { get; set; }
+
+
     }
 }

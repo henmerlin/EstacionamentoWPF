@@ -10,9 +10,6 @@ namespace Estacionamento.DAL
     {
         private static Context ctx = Singleton.Instance.Context;
 
-        private static List<Cliente> listaDeClientes = new List<Cliente>();
-
-
         public static bool AdicionarCliente(Cliente c)
         {
             try

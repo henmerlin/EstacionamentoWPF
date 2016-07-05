@@ -31,9 +31,11 @@ namespace Estacionamento.View
         private void btnGravar_Click(object sender, RoutedEventArgs e)
         {
             c = new Cliente();
+
             c.Nome = txtNome.Text;
             c.Cpf = txtCpf.Text;
             c.Telefone = txtTelefone.Text;
+
             if (ClienteDAO.AdicionarCliente(c))
             {
                 MessageBox.Show("Gravado com sucesso!", "Cadastro de Cliente",

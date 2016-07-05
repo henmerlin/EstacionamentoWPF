@@ -23,7 +23,9 @@ namespace Estacionamento.DAL
         public DbSet<Modelo> Modelos { get; set; }
 
         public DbSet<Servico> Servicos { get; set; }
+
         public DbSet<Funcionario> Funcionarios { get; set; }
+
 
     }
 }

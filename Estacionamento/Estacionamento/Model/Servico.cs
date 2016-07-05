@@ -18,8 +18,6 @@ namespace Estacionamento.Model
 
         public DateTime DataFim { get; set; }
 
-        public Cliente Cliente { get; set; }
-
         public Vaga Vaga { get; set; }
 
         public Veiculo Veiculo { get; set; }

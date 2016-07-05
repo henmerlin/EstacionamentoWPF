@@ -11,13 +11,12 @@ namespace Estacionamento.DAL
     {
         private static Context ctx = Singleton.Instance.Context;
 
-        private static List<Marca> ListaDeMarcas = new List<Marca>();
-
         public static bool AdicionarMarca(Marca m)
         {
             if (VerificaNome(m) == null)
             {
-                ListaDeMarcas.Add(m);
+                ctx.Marcas.Add(m);
+                ctx.SaveChanges();
                 return true;
             }
             else
@@ -29,7 +28,7 @@ namespace Estacionamento.DAL
         public static List<Marca> RetornarLista()
         {
 
-            return ListaDeMarcas;
+            return ctx.Marcas.ToList();
 
         }
 

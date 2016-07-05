@@ -34,46 +34,46 @@ namespace Estacionamento.View
             v.Referencia = txtReferencia.Text;
 
 
-            if (ClienteDAO.AdicionarCliente(c))
+            if (VagaDAO.AdicionarVaga(v))
             {
-                MessageBox.Show("Gravado com sucesso!", "Cadastro de Cliente",
+                MessageBox.Show("Gravado com sucesso!", "Cadastro de Vaga",
                 MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("Não foi possível gravar!", "Cadastro de Cliente",
+               MessageBox.Show("Não foi possível gravar!", "Cadastro de Vaga",
                 MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            txtNome.Text = "";
-            txtNome.Focus();
+            txtReferencia.Text = "";
+            txtReferencia.Focus();
         }
 
         private void btnBuscarCliente_Click(object sender, RoutedEventArgs e)
         {
-            c = new Cliente();
-            if (!string.IsNullOrEmpty(txtBuscarCliente.Text))
-            {
-                c.Cpf = txtBuscarCliente.Text;
-                c = ClienteDAO.VerificarClientePorCPF(c);
-                if (c != null)
-                {
-                    txtNome.Text = c.Nome;
-                    txtCpf.Text = c.Cpf;
-                    txtTelefone.Text = c.Telefone;
-                    HabilitarBotoes();
-                }
-                else
-                {
-                    MessageBox.Show("Cliente não encontrado!", "Cadastro de Cliente",
-                    MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Favor preencher o campo da busca", "Cadastro de Cliente",
-                MessageBoxButton.OK, MessageBoxImage.Information);
-            }
+            //c = new Cliente();
+            //if (!string.IsNullOrEmpty(txtBuscarCliente.Text))
+            //{
+            //    c.Cpf = txtBuscarCliente.Text;
+            //    c = ClienteDAO.VerificarClientePorCPF(c);
+            //    if (c != null)
+            //    {
+            //        txtNome.Text = c.Nome;
+            //        txtCpf.Text = c.Cpf;
+            //        txtTelefone.Text = c.Telefone;
+            //        HabilitarBotoes();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Cliente não encontrado!", "Cadastro de Cliente",
+            //        MessageBoxButton.OK, MessageBoxImage.Information);
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Favor preencher o campo da busca", "Cadastro de Cliente",
+            //    MessageBoxButton.OK, MessageBoxImage.Information);
+            //}
         }
 
         public void HabilitarBotoes()
@@ -91,9 +91,7 @@ namespace Estacionamento.View
             btnCancelar.IsEnabled = false;
             btnGravar.IsEnabled = true;
             txtBuscarCliente.Clear();
-            txtCpf.Clear();
-            txtNome.Clear();
-            txtTelefone.Clear();
+            txtReferencia.Clear();
             txtBuscarCliente.Focus();
         }
 
@@ -104,50 +102,50 @@ namespace Estacionamento.View
 
         private void btnRemover_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Deseja remover o registro?", "Cadastro de Cliente",
-                MessageBoxButton.YesNo, MessageBoxImage.Question) ==
-                MessageBoxResult.Yes)
-            {
-                if (ClienteDAO.RemoverCliente(c))
-                {
-                    MessageBox.Show("Cliente removido com sucesso", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Cliente não removido!", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                DesabilitarBotoes();
-            }
-            else
-            {
-                DesabilitarBotoes();
-            }
+            //if (MessageBox.Show("Deseja remover o registro?", "Cadastro de Cliente",
+            //    MessageBoxButton.YesNo, MessageBoxImage.Question) ==
+            //    MessageBoxResult.Yes)
+            //{
+            //    if (ClienteDAO.RemoverCliente(c))
+            //    {
+            //        MessageBox.Show("Cliente removido com sucesso", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Information);
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Cliente não removido!", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    }
+            //    DesabilitarBotoes();
+            //}
+            //else
+            //{
+            //    DesabilitarBotoes();
+            //}
         }
 
         private void btnAlterar_Click(object sender, RoutedEventArgs e)
         {
 
-            if (MessageBox.Show("Deseja alterar o registro?", "Cadastro de Cliente",
-                MessageBoxButton.YesNo, MessageBoxImage.Question) ==
-                MessageBoxResult.Yes)
-            {
-                c.Nome = txtNome.Text;
-                c.Cpf = txtCpf.Text;
-                c.Telefone = txtTelefone.Text;
-                if (ClienteDAO.AlterarCliente(c))
-                {
-                    MessageBox.Show("Cliente alterado com sucesso", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Cliente não alterado!", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                DesabilitarBotoes();
-            }
-            else
-            {
-                DesabilitarBotoes();
-            }
+        //    if (MessageBox.Show("Deseja alterar o registro?", "Cadastro de Cliente",
+        //        MessageBoxButton.YesNo, MessageBoxImage.Question) ==
+        //        MessageBoxResult.Yes)
+        //    {
+        //        c.Nome = txtNome.Text;
+        //        c.Cpf = txtCpf.Text;
+        //        c.Telefone = txtTelefone.Text;
+        //        if (ClienteDAO.AlterarCliente(c))
+        //        {
+        //            MessageBox.Show("Cliente alterado com sucesso", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Information);
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Cliente não alterado!", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Error);
+        //        }
+        //        DesabilitarBotoes();
+        //    }
+        //    else
+        //    {
+        //        DesabilitarBotoes();
+        //    }
         }
     }
 }

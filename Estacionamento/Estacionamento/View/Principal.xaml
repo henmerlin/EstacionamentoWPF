@@ -10,7 +10,7 @@
                 <MenuItem Header="Marcas" HorizontalAlignment="Left" Width="160"/>
                 <MenuItem Header="Modelos" HorizontalAlignment="Left" Width="160"/>
                 <Separator HorizontalAlignment="Left"  Width="160"/>
-                <MenuItem Header="Vagas" HorizontalAlignment="Left" Width="160"/>
+                <MenuItem Header="Vagas" HorizontalAlignment="Left" Width="160" Click="AbrirWindowVagas"/>
             </MenuItem>
 
             <MenuItem Header="Relatórios">

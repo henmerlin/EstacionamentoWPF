@@ -27,13 +27,14 @@ namespace Estacionamento.View
 
         private void AbrirWindowCliente(object sender, RoutedEventArgs e)
         {
-
             Window form = new Clientes();
             form.ShowDialog();
         }
 
-        private void AbrirWindowFuncionario(object sender, RoutedEventArgs e)
+        private void AbrirWindowVagas(object sender, RoutedEventArgs e)
         {
+            Window form = new Vagas();
+            form.ShowDialog();
         }
 
         private void Cadastro_Funcionario(object sender, RoutedEventArgs e)

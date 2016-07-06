@@ -31,7 +31,6 @@ namespace Estacionamento.DAL
 
         public static List<Cliente> RetornarLista()
         {
-            //return listaDeClientes;
             return ctx.Clientes.ToList();
         }
 

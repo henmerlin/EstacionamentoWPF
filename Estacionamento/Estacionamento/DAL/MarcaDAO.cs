@@ -13,40 +13,55 @@ namespace Estacionamento.DAL
 
         public static bool AdicionarMarca(Marca m)
         {
-            if (VerificaNome(m) == null)
+            try
             {
                 ctx.Marcas.Add(m);
                 ctx.SaveChanges();
                 return true;
             }
-            else
+            catch (Exception)
             {
                 return false;
             }
         }
 
+        public static Marca VerificarMarcaPorNome(Marca m)
+        {
+            return ctx.Marcas.FirstOrDefault(x => m.Nome.Equals(m.Nome));
+        }
+
         public static List<Marca> RetornarLista()
         {
-
             return ctx.Marcas.ToList();
-
         }
 
-
-        public static Marca VerificaNome(Marca m)
+        public static bool RemoverMarca(Marca m)
         {
-
-            foreach (Marca marcaCadastrado in MarcaDAO.RetornarLista())
+            try
             {
-                if (m.Nome.Equals(marcaCadastrado.Nome))
-                {
-                    return marcaCadastrado;
-
-                }
+                ctx.Marcas.Remove(m);
+                ctx.SaveChanges();
+                return true;
             }
-
-            return null;
-
+            catch (Exception)
+            {
+                return false;
+            }
         }
+
+        public static bool AlterarMarca(Marca m)
+        {
+            try
+            {
+                ctx.Entry(m).State = System.Data.Entity.EntityState.Modified;
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return true;
+            }
+        }
+
     }
 }

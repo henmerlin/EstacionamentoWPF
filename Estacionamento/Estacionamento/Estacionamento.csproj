@@ -93,6 +93,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsBanco.xsd</DependentUpon>
     </Compile>
+    <Page Include="View\Marcas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\Vagas.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -122,6 +126,9 @@
     <Compile Include="Model\Servico.cs" />
     <Compile Include="Model\Singleton.cs" />
     <Compile Include="Model\Veiculo.cs" />
+    <Compile Include="View\Marcas.xaml.cs">
+      <DependentUpon>Marcas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Vagas.xaml.cs">
       <DependentUpon>Vagas.xaml</DependentUpon>
     </Compile>

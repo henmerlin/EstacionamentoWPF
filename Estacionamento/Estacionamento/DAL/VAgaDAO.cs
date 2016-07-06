@@ -10,7 +10,6 @@ namespace Estacionamento.DAL
     {
         private static Context ctx = Singleton.Instance.Context;
 
-
         public static bool AdicionarVaga(Vaga v)
         {
             try
@@ -32,7 +31,6 @@ namespace Estacionamento.DAL
 
         public static List<Vaga> RetornarLista()
         {
-            //return listaDeClientes;
             return ctx.Vagas.ToList();
         }
 

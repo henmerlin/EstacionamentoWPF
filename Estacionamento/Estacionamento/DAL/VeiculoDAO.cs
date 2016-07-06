@@ -12,43 +12,57 @@ namespace Estacionamento.DAL
 
         private static Context ctx = Singleton.Instance.Context;
 
-        private static List<Veiculo> ListaDeCarros = new List<Veiculo>();       
-
-        public static bool AdicionarCarro(Veiculo ca)
+        public static bool AdicionarVaga(Veiculo v)
         {
-            if (VerificaPlaca(ca) == null)
+            try
             {
-                ListaDeCarros.Add(ca);
+                ctx.Veiculos.Add(v);
+                ctx.SaveChanges();
                 return true;
             }
-            else
+            catch (Exception)
             {
                 return false;
             }
         }
 
+        //public static Veiculo VerificarVeiculoPorNome(Veiculo v)
+        //{
+        //   return ctx.Vagas.FirstOrDefault(x => v.nome.Equals(v.Id));
+        //}
+
         public static List<Veiculo> RetornarLista()
         {
-
-            return ListaDeCarros;
-
+            return ctx.Veiculos.ToList();
         }
 
-
-        public static Veiculo VerificaPlaca(Veiculo ca)
+        public static bool RemoverVeiculo(Veiculo v)
         {
-
-            foreach (Veiculo carroCadastrado in VeiculoDAO.RetornarLista())
+            try
             {
-                if (ca.Placa.Equals(carroCadastrado.Placa))
-                {
-                    return carroCadastrado;
-
-                }
+                ctx.Veiculos.Remove(v);
+                ctx.SaveChanges();
+                return true;
             }
-
-            return null;
-
+            catch (Exception)
+            {
+                return false;
+            }
         }
+
+        public static bool AlterarVeiculo(Veiculo v)
+        {
+            try
+            {
+                ctx.Entry(v).State = System.Data.Entity.EntityState.Modified;
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return true;
+            }
+        }
+
     }
 }

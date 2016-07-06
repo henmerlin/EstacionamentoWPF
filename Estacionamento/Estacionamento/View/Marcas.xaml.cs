@@ -30,49 +30,45 @@ namespace Estacionamento.View
 
         private void btnGravar_Click(object sender, RoutedEventArgs e)
         {
-            v = new Vaga();
-            v.Referencia = txtReferencia.Text;
+            m = new Marca();
+            m.Nome = txtNomeMarca.Text;
 
-
-            if (VagaDAO.AdicionarVaga(v))
+            if (MarcaDAO.AdicionarMarca(m))
             {
-                MessageBox.Show("Gravado com sucesso!", "Cadastro de Vaga",
+                MessageBox.Show("Gravado com sucesso!", "Cadastro de Marca",
                 MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-               MessageBox.Show("Não foi possível gravar!", "Cadastro de Vaga",
+               MessageBox.Show("Não foi possível gravar!", "Cadastro de Marca",
                 MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            txtReferencia.Text = "";
-            txtReferencia.Focus();
+            txtNomeMarca.Text = "";
+            txtNomeMarca.Focus();
         }
 
         private void btnBuscarCliente_Click(object sender, RoutedEventArgs e)
         {
-            v = new Vaga();
-            if (!string.IsNullOrEmpty(txtNrVaga.Text))
+            m = new Marca();
+            if (!string.IsNullOrEmpty(txtBuscarMarca.Text))
             {
-
-
-                v.Id = int.Parse(txtNrVaga.Text);
-
-                v = VagaDAO.VerificarVagaPorId(v);
-                if (v != null)
+                m.Nome = txtBuscarMarca.Text;
+                m = MarcaDAO.VerificarMarcaPorNome(m);
+                if (m != null)
                 {
-                    txtReferencia.Text = v.Referencia;
+                    txtNomeMarca.Text = m.Nome;
                     HabilitarBotoes();
                 }
                 else
                 {
-                    MessageBox.Show("Vaga não encontrada!", "Cadastro de Vaga",
+                    MessageBox.Show("Marca não encontrada!", "Cadastro de Marca",
                     MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Favor preencher o campo da busca", "Cadastro de Vaga",
+                MessageBox.Show("Favor preencher o campo da busca", "Cadastro de Marca",
                 MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
@@ -91,7 +87,7 @@ namespace Estacionamento.View
             btnRemover.IsEnabled = false;
             btnCancelar.IsEnabled = false;
             btnGravar.IsEnabled = true;
-            txtReferencia.Clear();
+            txtNomeMarca.Clear();
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
@@ -101,17 +97,17 @@ namespace Estacionamento.View
 
         private void btnRemover_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Deseja remover o registro?", "Cadastro de Vaga",
+            if (MessageBox.Show("Deseja remover o registro?", "Cadastro de Marca",
                 MessageBoxButton.YesNo, MessageBoxImage.Question) ==
                 MessageBoxResult.Yes)
             {
-                if (VagaDAO.RemoverVaga(v))
+                if (MarcaDAO.RemoverMarca(m))
                 {
-                    MessageBox.Show("Vaga removida com sucesso", "Cadastra Vaga", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Marca removida com sucesso", "Cadastra Marca", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Vaga não removida!", "Cadastra Vaga", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Marca não removida!", "Cadastra Marca", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 DesabilitarBotoes();
             }
@@ -124,18 +120,18 @@ namespace Estacionamento.View
         private void btnAlterar_Click(object sender, RoutedEventArgs e)
         {
 
-            if (MessageBox.Show("Deseja alterar o registro?", "Cadastro de Vaga",
+            if (MessageBox.Show("Deseja alterar o registro?", "Cadastro de Marca",
                 MessageBoxButton.YesNo, MessageBoxImage.Question) ==
                 MessageBoxResult.Yes)
             {
-                v.Referencia = txtReferencia.Text;
-                if (VagaDAO.AlterarVaga(v))
+                m.Nome = txtNomeMarca.Text;
+                if (MarcaDAO.AlterarMarca(m))
                 {
-                    MessageBox.Show("Vaga alterada com sucesso", "Cadastra Vaga", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Marca alterada com sucesso", "Cadastra Marca", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Vaga não alterada!", "Cadastra Vaga", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Marca não alterada!", "Cadastra Marca", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 DesabilitarBotoes();
             }

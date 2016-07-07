@@ -24,5 +24,15 @@ namespace Estacionamento.Model
 
         public Veiculo Veiculo { get; set; }
 
+        public Cliente Cliente { get; set; }
+
+
+
+        public Servico()
+        {
+            Veiculo = new Veiculo();
+            Vaga = new Vaga();
+        }
+
     }
 }

@@ -1,27 +1,25 @@
 ﻿<Window x:Class="Estacionamento.View.Servicos"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Servicos" Height="399.296" Width="484.119" Margin="3">
+        Title="Serviços" Height="399.296" Width="484.119" Margin="3" Topmost="True">
     <Grid>
-        <TextBox x:Name="txtBuscaServico" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Margin="141,10,0,0"/>
-        <Button Content="Buscar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="344,10,0,0" Height="23" Click="Buscar"/>
-        <Label Content="Buscar Servico Por Vaga:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="163" Margin="5,7,0,0"/>
+        <TextBox x:Name="txtBuscaPlaca" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Margin="59,10,0,0"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="241,10,0,0" Height="23" Click="Buscar"/>
+        <Label Content="Placa:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="49" Margin="5,7,0,0"/>
         <Separator HorizontalAlignment="Left" Height="52" Margin="0,22,0,0" VerticalAlignment="Top" Width="476"/>
-        <Label Content="Cliente:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="24,59,0,0" RenderTransformOrigin="0.604,-0.538"/>
-        <TextBox x:Name="txt_cliente" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Margin="82,62,0,0"/>
-        <Button x:Name="btn_save" Content="Gravar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="374,335,0,0" Height="23" Click="Gravar"/>
-        <Button x:Name="btn_edit" Content="Alterar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="264,335,0,0" Height="23"/>
+        <Label Content="Cliente:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="10,59,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Button x:Name="btn_save" Content="Iniciar Serviço" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="374,335,0,0" Height="23" Click="GravarServico"/>
+        <Button x:Name="btn_edit" Content="Encerrar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="264,335,0,0" Height="23"/>
         <Button x:Name="btn_remove" Content="Remover" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="156,335,0,0" Height="23" Click="Remover"/>
         <Button x:Name="btn_cancel" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="44,335,0,0" Height="23" Click="Cancelar"/>
-        <Label Content="Veiculo:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="24,105,0,0" RenderTransformOrigin="0.604,-0.538"/>
-        <Label Content="Modelo:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="24,151,0,0" RenderTransformOrigin="0.604,-0.538"/>
-        <Label Content="Placa:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="24,196,0,0" RenderTransformOrigin="0.604,-0.538"/>
-        <TextBox x:Name="txt_Modelo" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Margin="82,154,0,0"/>
-        <TextBox x:Name="txt_Placa" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Margin="82,199,0,0"/>
-        <Label Content="Marca:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="24,238,0,0" RenderTransformOrigin="0.604,-0.538"/>
-        <TextBox x:Name="txt_Marca" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Margin="82,241,0,0"/>
-        <Label Content="Vaga:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="241,62,0,0" RenderTransformOrigin="0.604,-0.538"/>
-        <TextBox x:Name="txt_Vaga" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Margin="285,62,0,0"/>
-        <ComboBox x:Name="Comb_veiculo" HorizontalAlignment="Left" Margin="82,109,0,0" VerticalAlignment="Top" Width="112" SelectionChanged="Comb_veiculo_SelectionChanged_1"/>
+        <Label Content="Modelo:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="10,115,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label Content="Marca:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="10,87,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label Content="Vaga:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="10,143,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label Content="Duração (horas):" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" Margin="10,171,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label x:Name="lbDuracao" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="108,171,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label x:Name="lbVaga" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="108,143,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label x:Name="lbModelo" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="108,115,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label x:Name="lbMarca" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="108,87,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label x:Name="lbCliente" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="108,59,0,0" RenderTransformOrigin="0.604,-0.538"/>
     </Grid>
 </Window>

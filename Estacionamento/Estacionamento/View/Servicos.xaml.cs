@@ -23,30 +23,69 @@ namespace Estacionamento.View
     {
 
         Servico s = new Servico();
+
         public Servicos()
         {
             InitializeComponent();
         }
 
 
-        private void Gravar(object sender, RoutedEventArgs e)
+        private void GravarServico(object sender, RoutedEventArgs e)
         {
             s = new Servico();
-            s.Cliente.Nome = txt_cliente.Text;
-            s.Veiculo.Placa = txt_Placa.Text;
-            s.Veiculo.Modelo.Marca.Nome = txt_Marca.Text;
-            s.Veiculo.Modelo.Nome = txt_Modelo.Text;
-        
 
+            //Veiculo v = new Veiculo();
+            //v.Placa = txtBuscaPlaca.Text;
+
+            //s.Veiculo = VeiculoDAO.VerificarVeiculoPorPlaca(v);
+            //s.Cliente = s.Veiculo.Cliente;
+            //s.DataInicio = DateTime.Now;
+
+            if (ServicoDAO.AdicionarServico(s))
+            {
+                MessageBox.Show("Serviço iniciado com sucesso!", "Cadastro de Serviços",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível gravar!", "Cadastro de Serviços",
+                MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            txtBuscaPlaca.Text = "";
+            txtBuscaPlaca.Focus();
 
         }
         private void Buscar(object sender, RoutedEventArgs e)
         {
+            s = new Servico();
 
-        }
+            Veiculo v = new Veiculo();
+            v.Placa = txtBuscaPlaca.Text;
 
-        private void Comb_veiculo_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+
+            if (!string.IsNullOrEmpty(txtBuscaPlaca.Text))
+            {
+                s = ServicoDAO.VerificarServicoPorPlaca(VeiculoDAO.VerificarVeiculoPorPlaca(v));
+                if (s != null)
+                {
+                    lbCliente.Content = s.Cliente.Nome;
+                    lbMarca.Content = s.Veiculo.Modelo.Nome;
+                    lbVaga.Content = s.Vaga.Id + " " + s.Vaga.Referencia;
+                    HabilitarBotoes();
+                }
+                else
+                {
+                    MessageBox.Show("Placa não encontrada, para iniciar - pressione Iniciar Serviço!", "Cadastro de Serviço",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Favor preencher o campo da busca", "Cadastro de Serviço",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
 
         }
 
@@ -68,13 +107,11 @@ namespace Estacionamento.View
             btn_remove.IsEnabled = false;
             btn_cancel.IsEnabled = false;
             btn_save.IsEnabled = true;
-            txtBuscaServico.Clear();
-            txt_cliente.Clear();
-            txt_Marca.Clear();
-            txt_Modelo.Clear();
-            txt_Placa.Clear();
-            txt_Vaga.Clear();
-            txtBuscaServico.Focus();
+            lbCliente.Content = "";
+            lbDuracao.Content = "";
+            lbMarca.Content = "";
+            lbModelo.Content = "";
+            txtBuscaPlaca.Focus();
         }
 
         private void Remover(object sender, RoutedEventArgs e)
@@ -98,19 +135,5 @@ namespace Estacionamento.View
             //    DesabilitarBotoes();
             //}
         }
-
-        private void Comb_veiculo_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-            Veiculo v = (Veiculo)Comb_veiculo.SelectedItem;
-            v = VeiculoDAO.VerificarVeiculoPorPlaca(v);
-            Comb_veiculo.DisplayMemberPath = "Nome";
-            Comb_veiculo.SelectedValuePath = "Id";
-        }
-
-     
-
-
-
-    
     }
 }

@@ -27,6 +27,11 @@ namespace Estacionamento.DAL
             }
         }
 
+        public static Servico VerificarServicoPorPlaca(Veiculo v)
+        {
+            return ctx.Servicos.FirstOrDefault(x => x.Veiculo.Placa.Equals(v.Placa));
+        }
+
         public static List<Servico> RetornarServico()
         {
             return ctx.Servicos.ToList();

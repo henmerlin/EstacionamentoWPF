@@ -20,6 +20,7 @@ namespace Estacionamento.DAL
         public DbSet<Veiculo> Veiculos { get; set; }
 
         public DbSet<Marca> Marcas { get; set; }
+
         public DbSet<Modelo> Modelos { get; set; }
 
         public DbSet<Vaga> Vagas { get; set; }

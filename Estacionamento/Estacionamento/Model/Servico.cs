@@ -26,12 +26,11 @@ namespace Estacionamento.Model
 
         public Cliente Cliente { get; set; }
 
-
-
         public Servico()
         {
             Veiculo = new Veiculo();
             Vaga = new Vaga();
+            Cliente = new Cliente();
         }
 
     }

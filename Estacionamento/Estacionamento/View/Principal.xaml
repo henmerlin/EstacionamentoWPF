@@ -12,7 +12,7 @@
                 <MenuItem Header="Veículos" HorizontalAlignment="Left" Width="160" Click="AbrirWindowVeiculos"/>
                 <Separator HorizontalAlignment="Left"  Width="160"/>
                 <MenuItem Header="Vagas" HorizontalAlignment="Left" Width="160" Click="AbrirWindowVagas"/>
-                <MenuItem Header="Servicos" HorizontalAlignment="Left" Width="160" Click="AbrirWindowServico"/>
+                <MenuItem Header="Serviços" HorizontalAlignment="Left" Width="160" Click="AbrirWindowServico"/>
             </MenuItem>
 
             <MenuItem Header="Relatórios">

@@ -8,7 +8,7 @@
                 <MenuItem Header="Clientes" HorizontalAlignment="Left" Width="160" Click="AbrirWindowCliente"/>
                 <Separator HorizontalAlignment="Left"  Width="160"/>
                 <MenuItem Header="Marcas" HorizontalAlignment="Left" Width="160" Click="AbrirWindowMarcas"/>
-                <MenuItem Header="Modelos" HorizontalAlignment="Left" Width="160"/>
+                <MenuItem Header="Modelos" HorizontalAlignment="Left" Width="160" Click="AbrirWindowModelos"/>
                 <Separator HorizontalAlignment="Left"  Width="160"/>
                 <MenuItem Header="Vagas" HorizontalAlignment="Left" Width="160" Click="AbrirWindowVagas"/>
             </MenuItem>

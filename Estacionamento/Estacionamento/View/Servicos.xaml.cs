@@ -148,15 +148,15 @@ namespace Estacionamento.View
 
                 s.DataFim = DateTime.Now;
 
-
-
                 if (ServicoDAO.RemoverServico(s))
                 {
-                    MessageBox.Show("Serviço removido com sucesso", "Cadastra Serviço", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Serviço encerrado com sucesso!\n" + 
+                                    "Total de Horas: " + Math.Round((DateTime.Now - s.DataInicio).TotalHours, 2) +".",
+                                    "Cadastra Serviço", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Serviço não removido!", "Cadastra Serviço", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Serviço não encerrado!", "Cadastra Serviço", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 DesabilitarBotoes();
             }

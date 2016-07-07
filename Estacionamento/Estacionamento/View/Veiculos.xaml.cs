@@ -59,11 +59,14 @@ namespace Estacionamento.View
             {
                MessageBox.Show("Não foi possível gravar!", "Cadastro de Veiculo",
                 MessageBoxButton.OK, MessageBoxImage.Error);
+               DesabilitarBotoes();
             }
 
             txtPlaca.Text = "";
             txtPlaca.Focus();
+          
         }
+
 
         private void btnBuscarCliente_Click(object sender, RoutedEventArgs e)
         {
@@ -85,7 +88,9 @@ namespace Estacionamento.View
                 {
                     MessageBox.Show("Veiculo não encontrado!", "Cadastro de Veiculo",
                     MessageBoxButton.OK, MessageBoxImage.Information);
+                    DesabilitarBotoes();
                 }
+                
             }
             else
             {

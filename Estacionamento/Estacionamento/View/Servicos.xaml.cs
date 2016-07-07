@@ -96,6 +96,14 @@ namespace Estacionamento.View
             //}
         }
 
+        private void Comb_veiculo_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            Veiculo v = (Veiculo)Comb_veiculo.SelectedItem;
+            v = VeiculoDAO.VerificarVeiculoPorPlaca(v);
+            Comb_veiculo.DisplayMemberPath = "Nome";
+            Comb_veiculo.SelectedValuePath = "Id";
+        }
+
      
 
 

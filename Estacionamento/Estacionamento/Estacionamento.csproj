@@ -103,8 +103,8 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\Servicos.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\Vagas.xaml">
       <Generator>MSBuild:Compile</Generator>

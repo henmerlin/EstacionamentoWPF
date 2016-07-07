@@ -33,7 +33,7 @@ namespace Estacionamento.View
         {
             s = new Servico();
             s.Cliente.Nome = txt_cliente.Text;
-            s.Veiculo.Cliente = txt_Veiculo;
+        
 
 
         }
@@ -41,6 +41,44 @@ namespace Estacionamento.View
         {
 
         }
+
+        private void Comb_veiculo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Cancelar(object sender, RoutedEventArgs e)
+        {
+            DesabilitarBotoes();
+        }
+        public void HabilitarBotoes()
+        {
+            btn_edit.IsEnabled = true;
+            btn_remove.IsEnabled = true;
+            btn_cancel.IsEnabled = true;
+            btn_save.IsEnabled = false;
+        }
+
+        public void DesabilitarBotoes()
+        {
+            btn_edit.IsEnabled = false;
+            btn_remove.IsEnabled = false;
+            btn_cancel.IsEnabled = false;
+            btn_save.IsEnabled = true;
+            txtBuscaServico.Clear();
+            txt_cliente.Clear();
+            txt_Marca.Clear();
+            txt_Modelo.Clear();
+            txt_Placa.Clear();
+            txtBuscaServico.Focus();
+        }
+
+        private void Remover(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+     
 
 
 

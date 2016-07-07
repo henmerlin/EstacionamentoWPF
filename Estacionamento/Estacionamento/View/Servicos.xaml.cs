@@ -42,10 +42,7 @@ namespace Estacionamento.View
 
         }
 
-        private void Comb_veiculo_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+     
 
         private void Cancelar(object sender, RoutedEventArgs e)
         {
@@ -80,13 +77,13 @@ namespace Estacionamento.View
                 MessageBoxButton.YesNo, MessageBoxImage.Question) ==
                 MessageBoxResult.Yes)
             {
-                if (ClienteDAO.RemoverCliente(c))
+                if (ServicoDAO.RemoverServico(s))
                 {
-                    MessageBox.Show("Cliente removido com sucesso", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Servico removido com sucesso", "Cadastro Servico", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Cliente não removido!", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Servico não removido!", "Cadastro Servico", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 DesabilitarBotoes();
             }

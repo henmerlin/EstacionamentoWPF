@@ -86,13 +86,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DAL\ModeloDAO.cs" />
     <Compile Include="DAL\VagaDAO.cs" />
     <Compile Include="Model\Modelo.cs" />
+    <Compile Include="View\Modelos.xaml.cs">
+      <DependentUpon>Modelos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="_Estacionamento_DAL_ContextDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
     </Compile>
+    <Page Include="View\Modelos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\Marcas.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

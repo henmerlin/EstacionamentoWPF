@@ -43,6 +43,12 @@ namespace Estacionamento.View
             form.ShowDialog();
         }
 
+        private void AbrirWindowModelos(object sender, RoutedEventArgs e)
+        {
+            Window form = new Modelos();
+            form.ShowDialog();
+        }
+
         private void Cadastro_Funcionario(object sender, RoutedEventArgs e)
         {
 

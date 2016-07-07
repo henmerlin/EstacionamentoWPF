@@ -16,7 +16,7 @@
             </MenuItem>
 
             <MenuItem Header="Relatórios">
-                <MenuItem Header="Listar" HorizontalAlignment="Left" Width="160" Click="AbrirWindowListarVagas"/>
+                <MenuItem Header="Listar Clientes" HorizontalAlignment="Left" Width="180" Click="AbrirWindowListarClientes"/>
             </MenuItem>
 
 

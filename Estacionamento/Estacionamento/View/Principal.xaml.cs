@@ -62,9 +62,9 @@ namespace Estacionamento.View
             form.ShowDialog();
         }
 
-        private void AbrirWindowListarVagas(object sender, RoutedEventArgs e)
+        private void AbrirWindowListarClientes(object sender, RoutedEventArgs e)
         {
-            Form form = new ListarVagas();
+            Form form = new ListarClientes();
             form.ShowDialog();
         }
         

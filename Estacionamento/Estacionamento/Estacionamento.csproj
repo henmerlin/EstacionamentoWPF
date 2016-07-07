@@ -89,15 +89,20 @@
     <Compile Include="DAL\ModeloDAO.cs" />
     <Compile Include="DAL\ServicoDAO.cs" />
     <Compile Include="DAL\VagaDAO.cs" />
+    <Compile Include="dsEstacionamento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEstacionamento.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\Modelo.cs" />
     <Compile Include="View\ListarCliente.xaml.cs">
       <DependentUpon>ListarCliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ListarVagas.cs">
+    <Compile Include="View\ListarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ListarVagas.Designer.cs">
-      <DependentUpon>ListarVagas.cs</DependentUpon>
+    <Compile Include="View\ListarClientes.Designer.cs">
+      <DependentUpon>ListarClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Veiculos.xaml.cs">
       <DependentUpon>Veiculos.xaml</DependentUpon>
@@ -107,24 +112,6 @@
     </Compile>
     <Compile Include="View\Servicos.xaml.cs">
       <DependentUpon>Servicos.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="_Estacionamento_DAL_ContextDataSet.cs">
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="_Estacionamento_DAL_ContextDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_Estacionamento_DAL_ContextDataSet1.cs">
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet1.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="_Estacionamento_DAL_ContextDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet1.xsd</DependentUpon>
     </Compile>
     <Page Include="View\ListarCliente.xaml">
       <SubType>Designer</SubType>
@@ -214,37 +201,26 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ListarVagas.resx">
-      <DependentUpon>ListarVagas.cs</DependentUpon>
+    <EmbeddedResource Include="View\ListarClientes.resx">
+      <DependentUpon>ListarClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsEstacionamento.xsc">
+      <DependentUpon>dsEstacionamento.xsd</DependentUpon>
+    </None>
+    <None Include="dsEstacionamento.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEstacionamento.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsEstacionamento.xss">
+      <DependentUpon>dsEstacionamento.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="_Estacionamento_DAL_ContextDataSet.xsc">
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_Estacionamento_DAL_ContextDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_Estacionamento_DAL_ContextDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_Estacionamento_DAL_ContextDataSet.xss">
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_Estacionamento_DAL_ContextDataSet1.xsc">
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="_Estacionamento_DAL_ContextDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_Estacionamento_DAL_ContextDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_Estacionamento_DAL_ContextDataSet1.xss">
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

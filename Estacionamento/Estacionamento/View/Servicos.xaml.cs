@@ -45,7 +45,6 @@ namespace Estacionamento.View
                 s.DataInicio = DateTime.Now;
                 s.DataFim = null;
 
-
                 if (ServicoDAO.AdicionarServico(s))
                 {
                     MessageBox.Show("Serviço iniciado com sucesso!", "Cadastro de Serviços",

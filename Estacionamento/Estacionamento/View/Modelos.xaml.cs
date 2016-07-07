@@ -100,7 +100,6 @@ namespace Estacionamento.View
             btnCancelar.IsEnabled = false;
             btnGravar.IsEnabled = true;
             txtNomeModelo.Clear();
-            comboBoxMarca.Items.Clear();
             txtNomeModelo.Focus();
         }
 

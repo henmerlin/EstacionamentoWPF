@@ -51,6 +51,7 @@ namespace Estacionamento.View
         private void btnBuscarCliente_Click(object sender, RoutedEventArgs e)
         {
             m = new Marca();
+
             if (!string.IsNullOrEmpty(txtBuscarMarca.Text))
             {
                 m.Nome = txtBuscarMarca.Text;

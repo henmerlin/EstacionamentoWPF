@@ -35,21 +35,31 @@ namespace Estacionamento.View
             s = new Servico();
             Veiculo v = new Veiculo();
             v.Placa = txtBuscaPlaca.Text;
+
             v = VeiculoDAO.VerificarVeiculoPorPlaca(v);
 
-            s.Veiculo = v;
-            s.Cliente = v.Cliente;
-            s.DataInicio = DateTime.Now;
-            s.DataFim = null;
-
-            if (ServicoDAO.AdicionarServico(s))
+            if (v != null)
             {
-                MessageBox.Show("Serviço iniciado com sucesso!", "Cadastro de Serviços",
-                MessageBoxButton.OK, MessageBoxImage.Information);
+                s.Veiculo = v;
+                s.Cliente = v.Cliente;
+                s.DataInicio = DateTime.Now;
+                s.DataFim = null;
+
+
+                if (ServicoDAO.AdicionarServico(s))
+                {
+                    MessageBox.Show("Serviço iniciado com sucesso!", "Cadastro de Serviços",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possível gravar!", "Cadastro de Serviços",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Não foi possível gravar!", "Cadastro de Serviços",
+                MessageBox.Show("Placa de Veículo inválida!", "Cadastro de Serviços",
                 MessageBoxButton.OK, MessageBoxImage.Error);
             }
 

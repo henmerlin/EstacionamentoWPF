@@ -99,11 +99,6 @@
     <Compile Include="View\Servicos.xaml.cs">
       <DependentUpon>Servicos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="_Estacionamento_DAL_ContextDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
-    </Compile>
     <Page Include="View\Veiculos.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -194,17 +189,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="_Estacionamento_DAL_ContextDataSet.xsc">
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_Estacionamento_DAL_ContextDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_Estacionamento_DAL_ContextDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_Estacionamento_DAL_ContextDataSet.xss">
-      <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

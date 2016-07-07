@@ -26,7 +26,7 @@ namespace Estacionamento.DAL
 
         public static Vaga VerificarVagaPorId(Vaga v)
         {
-            return ctx.Vagas.FirstOrDefault(x => v.Id.Equals(v.Id));
+            return ctx.Vagas.FirstOrDefault(x => x.Id.Equals(v.Id));
         }
 
         public static List<Vaga> RetornarLista()

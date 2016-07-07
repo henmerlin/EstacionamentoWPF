@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace Estacionamento.View
 {
-    /// <summary>
-    /// Interaction logic for Clientes.xaml
-    /// </summary>
     public partial class Veiculos : Window
     {
 
@@ -35,6 +32,7 @@ namespace Estacionamento.View
             comboBoxCliente.ItemsSource = ClienteDAO.RetornarLista();
             comboBoxCliente.DisplayMemberPath = "Nome";
             comboBoxCliente.SelectedValuePath = "Id";
+
         }
 
         private void btnGravar_Click(object sender, RoutedEventArgs e)
@@ -164,6 +162,10 @@ namespace Estacionamento.View
         {
 
             Marca m = (Marca) comboBoxMarca.SelectedItem;
+
+            comboBoxModelo.ItemsSource = ModeloDAO.VerificarModeloPorMarca(m);
+            comboBoxMarca.DisplayMemberPath = "Nome";
+            comboBoxMarca.SelectedValuePath = "Id";
 
             MessageBox.Show(m.Nome);
 

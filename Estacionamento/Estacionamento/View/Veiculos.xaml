@@ -21,13 +21,11 @@
         <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="155,224,0,0" VerticalAlignment="Top" Width="60" TabIndex="4" IsEnabled="False" Click="btnAlterar_Click"/>
         <Button x:Name="btnRemover" Content="Remover" HorizontalAlignment="Left" Margin="85,224,0,0" VerticalAlignment="Top" Width="60" TabIndex="4" IsEnabled="False" Click="btnRemover_Click"/>
         <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="10,224,0,0" VerticalAlignment="Top" Width="60" TabIndex="4" IsEnabled="False" Click="btnCancelar_Click"/>
-        
-        
-        
-        <ComboBox x:Name="comboBoxMarca" HorizontalAlignment="Left" Margin="95,136,0,0" VerticalAlignment="Top" Width="196" SelectionChanged="comboBoxMarca_SelectionChanged">
-            <ComboBoxItem Content="" HorizontalAlignment="Left" Width="194"/>
-        </ComboBox>
-        
+
+
+
+        <ComboBox x:Name="comboBoxMarca" HorizontalAlignment="Left" Margin="95,136,0,0" VerticalAlignment="Top" Width="196" SelectionChanged="comboBoxMarca_SelectionChanged"/>
+
         <Label Content="Modelo Veículo:" HorizontalAlignment="Left" Margin="9,162,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="comboBoxModelo" HorizontalAlignment="Left" Margin="95,162,0,0" VerticalAlignment="Top" Width="196"/>
         <Label Content="Cliente:" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top"/>

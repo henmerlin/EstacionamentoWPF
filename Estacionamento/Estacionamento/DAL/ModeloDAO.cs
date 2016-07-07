@@ -31,6 +31,11 @@ namespace Estacionamento.DAL
             return ctx.Modelos.FirstOrDefault(x => m.Nome.Equals(m.Nome));
         }
 
+        public static Modelo VerificarModeloPorMarca(Modelo m)
+        {
+            return ctx.Modelos.FirstOrDefault(x => x.Marca.Equals(m.Nome));
+        }
+
         public static List<Modelo> RetornarLista()
         {
             return ctx.Modelos.ToList();

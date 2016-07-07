@@ -28,7 +28,7 @@ namespace Estacionamento.DAL
 
         public static Veiculo VerificarVeiculoPorPlaca(Veiculo v)
         {
-           return ctx.Veiculos.FirstOrDefault(x => v.Placa.Equals(v.Placa));
+           return ctx.Veiculos.FirstOrDefault(x => x.Placa.Equals(v.Placa));
         }
 
         public static List<Veiculo> RetornarLista()

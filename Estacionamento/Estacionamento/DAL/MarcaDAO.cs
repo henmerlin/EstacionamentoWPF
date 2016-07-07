@@ -27,12 +27,12 @@ namespace Estacionamento.DAL
 
         public static Marca VerificarMarcaPorNome(Marca m)
         {
-            return ctx.Marcas.FirstOrDefault(x => m.Nome.Equals(m.Nome));
+            return ctx.Marcas.FirstOrDefault(x => x.Nome.Equals(m.Nome));
         }
 
         public static Marca VerificarMarcaPorId(Marca m)
         {
-            return ctx.Marcas.FirstOrDefault(x => m.Id.Equals(m.Id));
+            return ctx.Marcas.FirstOrDefault(x => x.Id.Equals(m.Id));
         }
 
         public static List<Marca> RetornarLista()

@@ -76,24 +76,24 @@ namespace Estacionamento.View
 
         private void Remover(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Deseja remover o registro?", "Cadastro de Servico",
-                MessageBoxButton.YesNo, MessageBoxImage.Question) ==
-                MessageBoxResult.Yes)
-            {
-                if (ClienteDAO.RemoverCliente(c))
-                {
-                    MessageBox.Show("Cliente removido com sucesso", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Cliente não removido!", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                DesabilitarBotoes();
-            }
-            else
-            {
-                DesabilitarBotoes();
-            }
+            //if (MessageBox.Show("Deseja remover o registro?", "Cadastro de Servico",
+            //    MessageBoxButton.YesNo, MessageBoxImage.Question) ==
+            //    MessageBoxResult.Yes)
+            //{
+            //    if (ClienteDAO.RemoverCliente(c))
+            //    {
+            //        MessageBox.Show("Cliente removido com sucesso", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Information);
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Cliente não removido!", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    }
+            //    DesabilitarBotoes();
+            //}
+            //else
+            //{
+            //    DesabilitarBotoes();
+            //}
         }
 
      

@@ -8,13 +8,13 @@
         <Label Content="Marca:" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtNomeModelo" HorizontalAlignment="Left" Height="23" Margin="73,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" TabIndex="0"/>
         <Button x:Name="btnGravar" Content="Gravar" HorizontalAlignment="Left" Margin="230,180,0,0" VerticalAlignment="Top" Width="60" TabIndex="4" Click="btnGravar_Click"/>
-        <Label Content="Nº Modelo:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Height="23" Margin="73,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" TabIndex="0"/>
-        <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="216,38,0,0" VerticalAlignment="Top" Width="75" TabIndex="4" Click="btnBuscarCliente_Click"/>
+        <Label Content="Nome do Modelo:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Height="23" Margin="111,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" TabIndex="0"/>
+        <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="216,38,0,0" VerticalAlignment="Top" Width="75" TabIndex="4" Click="btnBuscarModelo_Click"/>
         <Separator HorizontalAlignment="Left" Height="4" Margin="10,65,0,0" VerticalAlignment="Top" Width="281"/>
         <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="155,180,0,0" VerticalAlignment="Top" Width="60" TabIndex="4" IsEnabled="False" Click="btnAlterar_Click"/>
         <Button x:Name="btnRemover" Content="Remover" HorizontalAlignment="Left" Margin="85,180,0,0" VerticalAlignment="Top" Width="60" TabIndex="4" IsEnabled="False" Click="btnRemover_Click"/>
         <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" Width="60" TabIndex="4" IsEnabled="False" Click="btnCancelar_Click"/>
-        <ComboBox x:Name="comboBoxMarca" HorizontalAlignment="Left" Margin="73,120,0,0" VerticalAlignment="Top" Width="217" SelectionChanged="comboBoxMarca_SelectionChanged"/>
+        <ComboBox x:Name="comboBoxMarca" HorizontalAlignment="Left" Margin="73,120,0,0" VerticalAlignment="Top" Width="217"/>
     </Grid>
 </Window>

@@ -26,7 +26,7 @@ namespace Estacionamento.DAL
             }
         }
 
-        public static Modelo VerificarMarcaPorNome(Modelo m)
+        public static Modelo VerificarModeloPorNome(Modelo m)
         {
             return ctx.Modelos.FirstOrDefault(x => m.Nome.Equals(m.Nome));
         }

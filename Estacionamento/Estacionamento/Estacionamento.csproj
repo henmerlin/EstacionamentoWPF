@@ -90,6 +90,9 @@
     <Compile Include="DAL\ServicoDAO.cs" />
     <Compile Include="DAL\VagaDAO.cs" />
     <Compile Include="Model\Modelo.cs" />
+    <Compile Include="View\Modelos.xaml.cs">
+      <DependentUpon>Modelos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Servicos.xaml.cs">
       <DependentUpon>Servicos.xaml</DependentUpon>
     </Compile>
@@ -99,6 +102,10 @@
       <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
     </Compile>
     <Page Include="View\Marcas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Modelos.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

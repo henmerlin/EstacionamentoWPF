@@ -45,6 +45,10 @@ namespace Estacionamento.View
                 s.DataInicio = DateTime.Now;
                 s.DataFim = null;
 
+                Vaga vag = VagaDAO.BuscarVagaDisponivel();
+                vag.Ocupada = true;
+                s.Vaga = vag;                    
+
                 if (ServicoDAO.AdicionarServico(s))
                 {
                     MessageBox.Show("Serviço iniciado com sucesso!", "Cadastro de Serviços",
@@ -74,7 +78,7 @@ namespace Estacionamento.View
             if (!string.IsNullOrEmpty(txtBuscaPlaca.Text))
             {
                 v.Placa = txtBuscaPlaca.Text;
-                s = ServicoDAO.VerificarServicoPorPlacaVeiculo(v);
+                s = ServicoDAO.VerificarServicoAbertoPorPlacaVeiculo(v);
 
                 if (s != null)
                 {
@@ -158,6 +162,7 @@ namespace Estacionamento.View
                 s.DataFim = DateTime.Now;
                 s.HorasTotal = Math.Round((DateTime.Now - s.DataInicio).TotalHours, 3);
                 s.ValorTotal = s.HorasTotal * 10;
+                s.Vaga.Ocupada = false;
 
                 if (ServicoDAO.AlterarServico(s))
                 {
@@ -171,6 +176,7 @@ namespace Estacionamento.View
                 {
                     MessageBox.Show("Serviço não encerrado!", "Cadastra Serviço", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
+
                 DesabilitarBotoes();
             }
             else

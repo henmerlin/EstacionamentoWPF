@@ -34,8 +34,19 @@ namespace Estacionamento.DAL
                             Include("Veiculo.Modelo").
                             Include("Veiculo.Modelo.Marca").
                             Include("Cliente").
-                            SingleOrDefault(x => x.Veiculo.Placa.Equals(v.Placa));
+                            SingleOrDefault(x => x.Veiculo.Placa.Equals(v.Placa) );
         }
+
+        public static Servico VerificarServicoAbertoPorPlacaVeiculo(Veiculo v)
+        {
+            return ctx.Servicos.Include("Vaga").
+                            Include("Veiculo").
+                            Include("Veiculo.Modelo").
+                            Include("Veiculo.Modelo.Marca").
+                            Include("Cliente").
+                            SingleOrDefault(x => (x.Veiculo.Placa.Equals(v.Placa) && x.DataFim == null));
+        }
+
 
         public static List<Servico> RetornarServico()
         {

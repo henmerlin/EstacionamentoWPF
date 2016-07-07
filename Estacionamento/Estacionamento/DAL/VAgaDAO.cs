@@ -24,6 +24,11 @@ namespace Estacionamento.DAL
             }
         }
 
+        public static Vaga BuscarVagaDisponivel()
+        {
+            return ctx.Vagas.FirstOrDefault(x => x.Ocupada == false);
+        }
+
         public static Vaga VerificarVagaPorId(Vaga v)
         {
             return ctx.Vagas.FirstOrDefault(x => x.Id.Equals(v.Id));

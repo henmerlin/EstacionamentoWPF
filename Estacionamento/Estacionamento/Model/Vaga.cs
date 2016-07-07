@@ -18,5 +18,7 @@ namespace Estacionamento.DAL
 
         public string Referencia { get; set; }
 
+        public bool Ocupada { get; set; }
+
     }
 }

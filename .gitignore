@@ -6,6 +6,10 @@
 *.user
 *.sln.docstates
 
+# Projeto
+App.config
+*.csproj
+
 # Build results
 
 [Dd]ebug/

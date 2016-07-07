@@ -86,6 +86,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DAL\ModeloDAO.cs" />
     <Compile Include="DAL\ServicoDAO.cs" />
     <Compile Include="DAL\VagaDAO.cs" />
     <Compile Include="Model\Modelo.cs" />

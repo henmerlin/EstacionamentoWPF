@@ -110,11 +110,21 @@
     </Compile>
     <Compile Include="_Estacionamento_DAL_ContextDataSet.cs">
       <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="_Estacionamento_DAL_ContextDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Estacionamento_DAL_ContextDataSet1.cs">
+      <DependentUpon>_Estacionamento_DAL_ContextDataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Estacionamento_DAL_ContextDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Estacionamento_DAL_ContextDataSet1.xsd</DependentUpon>
     </Compile>
     <Page Include="View\ListarCliente.xaml">
       <SubType>Designer</SubType>
@@ -223,6 +233,17 @@
     </None>
     <None Include="_Estacionamento_DAL_ContextDataSet.xss">
       <DependentUpon>_Estacionamento_DAL_ContextDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Estacionamento_DAL_ContextDataSet1.xsc">
+      <DependentUpon>_Estacionamento_DAL_ContextDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_Estacionamento_DAL_ContextDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Estacionamento_DAL_ContextDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Estacionamento_DAL_ContextDataSet1.xss">
+      <DependentUpon>_Estacionamento_DAL_ContextDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

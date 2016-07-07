@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="_Estacionamento_DAL_ContextDataSet" targetNamespace="http://tempuri.org/_Estacionamento_DAL_ContextDataSet.xsd" xmlns:mstns="http://tempuri.org/_Estacionamento_DAL_ContextDataSet.xsd" xmlns="http://tempuri.org/_Estacionamento_DAL_ContextDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="_Estacionamento_DAL_ContextDataSet1" targetNamespace="http://tempuri.org/_Estacionamento_DAL_ContextDataSet1.xsd" xmlns:mstns="http://tempuri.org/_Estacionamento_DAL_ContextDataSet1.xsd" xmlns="http://tempuri.org/_Estacionamento_DAL_ContextDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Estacionamento_DAL_ContextConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Estacionamento_DAL_ContextConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Estacionamento.Properties.Settings.GlobalReference.Default.Estacionamento_DAL_ContextConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Estacionamento_DAL_ContextConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Estacionamento_DAL_ContextConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Estacionamento.Properties.Settings.GlobalReference.Default.Estacionamento_DAL_ContextConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="__MigrationHistoryTableAdapter" GeneratorDataComponentClassName="__MigrationHistoryTableAdapter" Name="__MigrationHistory" UserDataComponentName="__MigrationHistoryTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString1 (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.__MigrationHistory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.__MigrationHistory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[__MigrationHistory] WHERE (([MigrationId] = @Original_MigrationId) AND ([ContextKey] = @Original_ContextKey) AND ([ProductVersion] = @Original_ProductVersion))</CommandText>
@@ -65,7 +65,7 @@ SELECT MigrationId, ContextKey, Model, ProductVersion FROM __MigrationHistory WH
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClientesTableAdapter" GeneratorDataComponentClassName="ClientesTableAdapter" Name="Clientes" UserDataComponentName="ClientesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString1 (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Clientes] WHERE (([Id] = @Original_Id))</CommandText>
@@ -116,7 +116,7 @@ SELECT Id, Nome, Cpf, Telefone FROM Clientes WHERE (Id = @Id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FuncionariosTableAdapter" GeneratorDataComponentClassName="FuncionariosTableAdapter" Name="Funcionarios" UserDataComponentName="FuncionariosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString1 (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Funcionarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Funcionarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Funcionarios] WHERE (([Id] = @Original_Id))</CommandText>
@@ -167,7 +167,7 @@ SELECT Id, Nome, Cpf, Telefone FROM Funcionarios WHERE (Id = @Id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MarcaTableAdapter" GeneratorDataComponentClassName="MarcaTableAdapter" Name="Marca" UserDataComponentName="MarcaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString1 (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Marca" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Marca" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Marca] WHERE (([Id] = @Original_Id))</CommandText>
@@ -212,7 +212,7 @@ SELECT Id, Nome FROM Marca WHERE (Id = @Id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ModelosTableAdapter" GeneratorDataComponentClassName="ModelosTableAdapter" Name="Modelos" UserDataComponentName="ModelosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString1 (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Modelos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Modelos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Modelos] WHERE (([Id] = @Original_Id) AND ((@IsNull_Marca_Id = 1 AND [Marca_Id] IS NULL) OR ([Marca_Id] = @Original_Marca_Id)))</CommandText>
@@ -264,63 +264,63 @@ SELECT Id, Nome, Marca_Id FROM Modelos WHERE (Id = @Id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ServicosTableAdapter" GeneratorDataComponentClassName="ServicosTableAdapter" Name="Servicos" UserDataComponentName="ServicosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString1 (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Servicos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Servicos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[Servicos] WHERE (([Id] = @Original_Id) AND ([DataInicio] = @Original_DataInicio) AND ((@IsNull_DataFim = 1 AND [DataFim] IS NULL) OR ([DataFim] = @Original_DataFim)) AND ((@IsNull_Vaga_Id = 1 AND [Vaga_Id] IS NULL) OR ([Vaga_Id] = @Original_Vaga_Id)) AND ((@IsNull_Veiculo_Id = 1 AND [Veiculo_Id] IS NULL) OR ([Veiculo_Id] = @Original_Veiculo_Id)) AND ((@IsNull_Cliente_Id = 1 AND [Cliente_Id] IS NULL) OR ([Cliente_Id] = @Original_Cliente_Id)))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[Servicos] WHERE (([Id] = @Original_Id) AND ([DataInicio] = @Original_DataInicio) AND ((@IsNull_DataFim = 1 AND [DataFim] IS NULL) OR ([DataFim] = @Original_DataFim)) AND ((@IsNull_Cliente_Id = 1 AND [Cliente_Id] IS NULL) OR ([Cliente_Id] = @Original_Cliente_Id)) AND ((@IsNull_Vaga_Id = 1 AND [Vaga_Id] IS NULL) OR ([Vaga_Id] = @Original_Vaga_Id)) AND ((@IsNull_Veiculo_Id = 1 AND [Veiculo_Id] IS NULL) OR ([Veiculo_Id] = @Original_Veiculo_Id)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataInicio" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataInicio" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataFim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DataFim" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataFim" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataFim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cliente_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cliente_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Cliente_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cliente_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Vaga_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Vaga_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Vaga_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Vaga_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Veiculo_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Veiculo_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Veiculo_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Veiculo_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cliente_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cliente_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Cliente_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cliente_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[Servicos] ([DataInicio], [DataFim], [Vaga_Id], [Veiculo_Id], [Cliente_Id]) VALUES (@DataInicio, @DataFim, @Vaga_Id, @Veiculo_Id, @Cliente_Id);
-SELECT Id, DataInicio, DataFim, Vaga_Id, Veiculo_Id, Cliente_Id FROM Servicos WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[Servicos] ([DataInicio], [DataFim], [Cliente_Id], [Vaga_Id], [Veiculo_Id]) VALUES (@DataInicio, @DataFim, @Cliente_Id, @Vaga_Id, @Veiculo_Id);
+SELECT Id, DataInicio, DataFim, Cliente_Id, Vaga_Id, Veiculo_Id FROM Servicos WHERE (Id = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataInicio" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataInicio" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataFim" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataFim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Cliente_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cliente_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Vaga_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Vaga_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Veiculo_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Veiculo_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Cliente_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cliente_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, DataInicio, DataFim, Vaga_Id, Veiculo_Id, Cliente_Id FROM dbo.Servicos</CommandText>
+                    <CommandText>SELECT Id, DataInicio, DataFim, Cliente_Id, Vaga_Id, Veiculo_Id FROM dbo.Servicos</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[Servicos] SET [DataInicio] = @DataInicio, [DataFim] = @DataFim, [Vaga_Id] = @Vaga_Id, [Veiculo_Id] = @Veiculo_Id, [Cliente_Id] = @Cliente_Id WHERE (([Id] = @Original_Id) AND ([DataInicio] = @Original_DataInicio) AND ((@IsNull_DataFim = 1 AND [DataFim] IS NULL) OR ([DataFim] = @Original_DataFim)) AND ((@IsNull_Vaga_Id = 1 AND [Vaga_Id] IS NULL) OR ([Vaga_Id] = @Original_Vaga_Id)) AND ((@IsNull_Veiculo_Id = 1 AND [Veiculo_Id] IS NULL) OR ([Veiculo_Id] = @Original_Veiculo_Id)) AND ((@IsNull_Cliente_Id = 1 AND [Cliente_Id] IS NULL) OR ([Cliente_Id] = @Original_Cliente_Id)));
-SELECT Id, DataInicio, DataFim, Vaga_Id, Veiculo_Id, Cliente_Id FROM Servicos WHERE (Id = @Id)</CommandText>
+                    <CommandText>UPDATE [dbo].[Servicos] SET [DataInicio] = @DataInicio, [DataFim] = @DataFim, [Cliente_Id] = @Cliente_Id, [Vaga_Id] = @Vaga_Id, [Veiculo_Id] = @Veiculo_Id WHERE (([Id] = @Original_Id) AND ([DataInicio] = @Original_DataInicio) AND ((@IsNull_DataFim = 1 AND [DataFim] IS NULL) OR ([DataFim] = @Original_DataFim)) AND ((@IsNull_Cliente_Id = 1 AND [Cliente_Id] IS NULL) OR ([Cliente_Id] = @Original_Cliente_Id)) AND ((@IsNull_Vaga_Id = 1 AND [Vaga_Id] IS NULL) OR ([Vaga_Id] = @Original_Vaga_Id)) AND ((@IsNull_Veiculo_Id = 1 AND [Veiculo_Id] IS NULL) OR ([Veiculo_Id] = @Original_Veiculo_Id)));
+SELECT Id, DataInicio, DataFim, Cliente_Id, Vaga_Id, Veiculo_Id FROM Servicos WHERE (Id = @Id)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataInicio" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataInicio" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DataFim" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataFim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Cliente_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cliente_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Vaga_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Vaga_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Veiculo_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Veiculo_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Cliente_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cliente_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataInicio" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataInicio" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataFim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DataFim" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DataFim" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DataFim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cliente_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cliente_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Cliente_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cliente_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Vaga_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Vaga_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Vaga_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Vaga_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Veiculo_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Veiculo_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Veiculo_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Veiculo_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cliente_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cliente_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Cliente_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cliente_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[Estacionamento.DAL.Context].dbo.Servicos" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
@@ -331,15 +331,15 @@ SELECT Id, DataInicio, DataFim, Vaga_Id, Veiculo_Id, Cliente_Id FROM Servicos WH
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
               <Mapping SourceColumn="DataInicio" DataSetColumn="DataInicio" />
               <Mapping SourceColumn="DataFim" DataSetColumn="DataFim" />
+              <Mapping SourceColumn="Cliente_Id" DataSetColumn="Cliente_Id" />
               <Mapping SourceColumn="Vaga_Id" DataSetColumn="Vaga_Id" />
               <Mapping SourceColumn="Veiculo_Id" DataSetColumn="Veiculo_Id" />
-              <Mapping SourceColumn="Cliente_Id" DataSetColumn="Cliente_Id" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VagasTableAdapter" GeneratorDataComponentClassName="VagasTableAdapter" Name="Vagas" UserDataComponentName="VagasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString1 (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Vagas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Vagas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Vagas] WHERE (([Id] = @Original_Id))</CommandText>
@@ -358,7 +358,7 @@ SELECT Id, Referencia FROM Vagas WHERE (Id = SCOPE_IDENTITY())</CommandText>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT Id, Referencia FROM dbo.Vagas</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -384,7 +384,7 @@ SELECT Id, Referencia FROM Vagas WHERE (Id = @Id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VeiculosTableAdapter" GeneratorDataComponentClassName="VeiculosTableAdapter" Name="Veiculos" UserDataComponentName="VeiculosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString1 (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Veiculos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Veiculos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Veiculos] WHERE (([Id] = @Original_Id) AND ((@IsNull_Cliente_Id = 1 AND [Cliente_Id] IS NULL) OR ([Cliente_Id] = @Original_Cliente_Id)) AND ((@IsNull_Modelo_Id = 1 AND [Modelo_Id] IS NULL) OR ([Modelo_Id] = @Original_Modelo_Id)))</CommandText>
@@ -441,29 +441,55 @@ SELECT Id, Placa, Cliente_Id, Modelo_Id FROM Veiculos WHERE (Id = @Id)</CommandT
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ResumoVagasTableAdapter" GeneratorDataComponentClassName="ResumoVagasTableAdapter" Name="ResumoVagas" UserDataComponentName="ResumoVagasTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Clientes1TableAdapter" GeneratorDataComponentClassName="Clientes1TableAdapter" Name="Clientes1" UserDataComponentName="Clientes1TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Estacionamento_DAL_ContextConnectionString (Settings)" DbObjectName="[Estacionamento.DAL.Context].dbo.Clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Clientes] WHERE (([Id] = @Original_Id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Clientes] ([Nome], [Cpf], [Telefone]) VALUES (@Nome, @Cpf, @Telefone);
+SELECT Nome, Cpf, Telefone, Id FROM Clientes WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nome" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cpf" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cpf" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Telefone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT     Vagas.Id, Vagas.Referencia, Servicos.DataInicio, Veiculos.Placa, Modelos.Nome, Marca.Nome AS Expr1
-FROM         Veiculos INNER JOIN
-                      Servicos ON Veiculos.Id = Servicos.Veiculo_Id INNER JOIN
-                      Marca ON Veiculos.Id = Marca.Id INNER JOIN
-                      Modelos ON Veiculos.Modelo_Id = Modelos.Id AND Marca.Id = Modelos.Marca_Id RIGHT OUTER JOIN
-                      Vagas ON Servicos.Vaga_Id = Vagas.Id</CommandText>
+                    <CommandText>SELECT        Nome, Cpf, Telefone, Id
+FROM            Clientes</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Clientes] SET [Nome] = @Nome, [Cpf] = @Cpf, [Telefone] = @Telefone WHERE (([Id] = @Original_Id));
+SELECT Nome, Cpf, Telefone, Id FROM Clientes WHERE (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Nome" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cpf" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cpf" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Telefone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[Estacionamento.DAL.Context].dbo.Clientes" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Id" DataSetColumn="Id" />
-              <Mapping SourceColumn="Referencia" DataSetColumn="Referencia" />
-              <Mapping SourceColumn="DataInicio" DataSetColumn="DataInicio" />
-              <Mapping SourceColumn="Placa" DataSetColumn="Placa" />
               <Mapping SourceColumn="Nome" DataSetColumn="Nome" />
-              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="Cpf" DataSetColumn="Cpf" />
+              <Mapping SourceColumn="Telefone" DataSetColumn="Telefone" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -472,10 +498,10 @@ FROM         Veiculos INNER JOIN
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="_Estacionamento_DAL_ContextDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_Estacionamento_DAL_ContextDataSet" msprop:Generator_UserDSName="_Estacionamento_DAL_ContextDataSet">
+  <xs:element name="_Estacionamento_DAL_ContextDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_Estacionamento_DAL_ContextDataSet1" msprop:Generator_UserDSName="_Estacionamento_DAL_ContextDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="__MigrationHistory" msprop:Generator_TableClassName="__MigrationHistoryDataTable" msprop:Generator_TableVarName="table__MigrationHistory" msprop:Generator_TablePropName="__MigrationHistory" msprop:Generator_RowDeletingName="__MigrationHistoryRowDeleting" msprop:Generator_RowChangingName="__MigrationHistoryRowChanging" msprop:Generator_RowEvHandlerName="__MigrationHistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="__MigrationHistoryRowDeleted" msprop:Generator_UserTableName="__MigrationHistory" msprop:Generator_RowChangedName="__MigrationHistoryRowChanged" msprop:Generator_RowEvArgName="__MigrationHistoryRowChangeEvent" msprop:Generator_RowClassName="__MigrationHistoryRow">
+        <xs:element name="__MigrationHistory" msprop:Generator_TableClassName="__MigrationHistoryDataTable" msprop:Generator_TableVarName="table__MigrationHistory" msprop:Generator_RowChangedName="__MigrationHistoryRowChanged" msprop:Generator_TablePropName="__MigrationHistory" msprop:Generator_RowDeletingName="__MigrationHistoryRowDeleting" msprop:Generator_RowChangingName="__MigrationHistoryRowChanging" msprop:Generator_RowEvHandlerName="__MigrationHistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="__MigrationHistoryRowDeleted" msprop:Generator_RowClassName="__MigrationHistoryRow" msprop:Generator_UserTableName="__MigrationHistory" msprop:Generator_RowEvArgName="__MigrationHistoryRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MigrationId" msprop:Generator_ColumnVarNameInTable="columnMigrationId" msprop:Generator_ColumnPropNameInRow="MigrationId" msprop:Generator_ColumnPropNameInTable="MigrationIdColumn" msprop:Generator_UserColumnName="MigrationId">
@@ -503,7 +529,7 @@ FROM         Veiculos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_RowEvArgName="ClientesRowChangeEvent" msprop:Generator_RowClassName="ClientesRow">
+        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_RowClassName="ClientesRow" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowEvArgName="ClientesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -531,7 +557,7 @@ FROM         Veiculos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Funcionarios" msprop:Generator_TableClassName="FuncionariosDataTable" msprop:Generator_TableVarName="tableFuncionarios" msprop:Generator_TablePropName="Funcionarios" msprop:Generator_RowDeletingName="FuncionariosRowDeleting" msprop:Generator_RowChangingName="FuncionariosRowChanging" msprop:Generator_RowEvHandlerName="FuncionariosRowChangeEventHandler" msprop:Generator_RowDeletedName="FuncionariosRowDeleted" msprop:Generator_UserTableName="Funcionarios" msprop:Generator_RowChangedName="FuncionariosRowChanged" msprop:Generator_RowEvArgName="FuncionariosRowChangeEvent" msprop:Generator_RowClassName="FuncionariosRow">
+        <xs:element name="Funcionarios" msprop:Generator_TableClassName="FuncionariosDataTable" msprop:Generator_TableVarName="tableFuncionarios" msprop:Generator_RowChangedName="FuncionariosRowChanged" msprop:Generator_TablePropName="Funcionarios" msprop:Generator_RowDeletingName="FuncionariosRowDeleting" msprop:Generator_RowChangingName="FuncionariosRowChanging" msprop:Generator_RowEvHandlerName="FuncionariosRowChangeEventHandler" msprop:Generator_RowDeletedName="FuncionariosRowDeleted" msprop:Generator_RowClassName="FuncionariosRow" msprop:Generator_UserTableName="Funcionarios" msprop:Generator_RowEvArgName="FuncionariosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -559,7 +585,7 @@ FROM         Veiculos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Marca" msprop:Generator_TableClassName="MarcaDataTable" msprop:Generator_TableVarName="tableMarca" msprop:Generator_TablePropName="Marca" msprop:Generator_RowDeletingName="MarcaRowDeleting" msprop:Generator_RowChangingName="MarcaRowChanging" msprop:Generator_RowEvHandlerName="MarcaRowChangeEventHandler" msprop:Generator_RowDeletedName="MarcaRowDeleted" msprop:Generator_UserTableName="Marca" msprop:Generator_RowChangedName="MarcaRowChanged" msprop:Generator_RowEvArgName="MarcaRowChangeEvent" msprop:Generator_RowClassName="MarcaRow">
+        <xs:element name="Marca" msprop:Generator_TableClassName="MarcaDataTable" msprop:Generator_TableVarName="tableMarca" msprop:Generator_RowChangedName="MarcaRowChanged" msprop:Generator_TablePropName="Marca" msprop:Generator_RowDeletingName="MarcaRowDeleting" msprop:Generator_RowChangingName="MarcaRowChanging" msprop:Generator_RowEvHandlerName="MarcaRowChangeEventHandler" msprop:Generator_RowDeletedName="MarcaRowDeleted" msprop:Generator_RowClassName="MarcaRow" msprop:Generator_UserTableName="Marca" msprop:Generator_RowEvArgName="MarcaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -573,7 +599,7 @@ FROM         Veiculos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Modelos" msprop:Generator_TableClassName="ModelosDataTable" msprop:Generator_TableVarName="tableModelos" msprop:Generator_TablePropName="Modelos" msprop:Generator_RowDeletingName="ModelosRowDeleting" msprop:Generator_RowChangingName="ModelosRowChanging" msprop:Generator_RowEvHandlerName="ModelosRowChangeEventHandler" msprop:Generator_RowDeletedName="ModelosRowDeleted" msprop:Generator_UserTableName="Modelos" msprop:Generator_RowChangedName="ModelosRowChanged" msprop:Generator_RowEvArgName="ModelosRowChangeEvent" msprop:Generator_RowClassName="ModelosRow">
+        <xs:element name="Modelos" msprop:Generator_TableClassName="ModelosDataTable" msprop:Generator_TableVarName="tableModelos" msprop:Generator_RowChangedName="ModelosRowChanged" msprop:Generator_TablePropName="Modelos" msprop:Generator_RowDeletingName="ModelosRowDeleting" msprop:Generator_RowChangingName="ModelosRowChanging" msprop:Generator_RowEvHandlerName="ModelosRowChangeEventHandler" msprop:Generator_RowDeletedName="ModelosRowDeleted" msprop:Generator_RowClassName="ModelosRow" msprop:Generator_UserTableName="Modelos" msprop:Generator_RowEvArgName="ModelosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -588,19 +614,19 @@ FROM         Veiculos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Servicos" msprop:Generator_TableClassName="ServicosDataTable" msprop:Generator_TableVarName="tableServicos" msprop:Generator_TablePropName="Servicos" msprop:Generator_RowDeletingName="ServicosRowDeleting" msprop:Generator_RowChangingName="ServicosRowChanging" msprop:Generator_RowEvHandlerName="ServicosRowChangeEventHandler" msprop:Generator_RowDeletedName="ServicosRowDeleted" msprop:Generator_UserTableName="Servicos" msprop:Generator_RowChangedName="ServicosRowChanged" msprop:Generator_RowEvArgName="ServicosRowChangeEvent" msprop:Generator_RowClassName="ServicosRow">
+        <xs:element name="Servicos" msprop:Generator_TableClassName="ServicosDataTable" msprop:Generator_TableVarName="tableServicos" msprop:Generator_RowChangedName="ServicosRowChanged" msprop:Generator_TablePropName="Servicos" msprop:Generator_RowDeletingName="ServicosRowDeleting" msprop:Generator_RowChangingName="ServicosRowChanging" msprop:Generator_RowEvHandlerName="ServicosRowChangeEventHandler" msprop:Generator_RowDeletedName="ServicosRowDeleted" msprop:Generator_RowClassName="ServicosRow" msprop:Generator_UserTableName="Servicos" msprop:Generator_RowEvArgName="ServicosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
               <xs:element name="DataInicio" msprop:Generator_ColumnVarNameInTable="columnDataInicio" msprop:Generator_ColumnPropNameInRow="DataInicio" msprop:Generator_ColumnPropNameInTable="DataInicioColumn" msprop:Generator_UserColumnName="DataInicio" type="xs:dateTime" />
               <xs:element name="DataFim" msprop:Generator_ColumnVarNameInTable="columnDataFim" msprop:Generator_ColumnPropNameInRow="DataFim" msprop:Generator_ColumnPropNameInTable="DataFimColumn" msprop:Generator_UserColumnName="DataFim" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cliente_Id" msprop:Generator_ColumnVarNameInTable="columnCliente_Id" msprop:Generator_ColumnPropNameInRow="Cliente_Id" msprop:Generator_ColumnPropNameInTable="Cliente_IdColumn" msprop:Generator_UserColumnName="Cliente_Id" type="xs:int" minOccurs="0" />
               <xs:element name="Vaga_Id" msprop:Generator_ColumnVarNameInTable="columnVaga_Id" msprop:Generator_ColumnPropNameInRow="Vaga_Id" msprop:Generator_ColumnPropNameInTable="Vaga_IdColumn" msprop:Generator_UserColumnName="Vaga_Id" type="xs:int" minOccurs="0" />
               <xs:element name="Veiculo_Id" msprop:Generator_ColumnVarNameInTable="columnVeiculo_Id" msprop:Generator_ColumnPropNameInRow="Veiculo_Id" msprop:Generator_ColumnPropNameInTable="Veiculo_IdColumn" msprop:Generator_UserColumnName="Veiculo_Id" type="xs:int" minOccurs="0" />
-              <xs:element name="Cliente_Id" msprop:Generator_ColumnVarNameInTable="columnCliente_Id" msprop:Generator_ColumnPropNameInRow="Cliente_Id" msprop:Generator_ColumnPropNameInTable="Cliente_IdColumn" msprop:Generator_UserColumnName="Cliente_Id" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Vagas" msprop:Generator_TableClassName="VagasDataTable" msprop:Generator_TableVarName="tableVagas" msprop:Generator_TablePropName="Vagas" msprop:Generator_RowDeletingName="VagasRowDeleting" msprop:Generator_RowChangingName="VagasRowChanging" msprop:Generator_RowEvHandlerName="VagasRowChangeEventHandler" msprop:Generator_RowDeletedName="VagasRowDeleted" msprop:Generator_UserTableName="Vagas" msprop:Generator_RowChangedName="VagasRowChanged" msprop:Generator_RowEvArgName="VagasRowChangeEvent" msprop:Generator_RowClassName="VagasRow">
+        <xs:element name="Vagas" msprop:Generator_TableClassName="VagasDataTable" msprop:Generator_TableVarName="tableVagas" msprop:Generator_RowChangedName="VagasRowChanged" msprop:Generator_TablePropName="Vagas" msprop:Generator_RowDeletingName="VagasRowDeleting" msprop:Generator_RowChangingName="VagasRowChanging" msprop:Generator_RowEvHandlerName="VagasRowChangeEventHandler" msprop:Generator_RowDeletedName="VagasRowDeleted" msprop:Generator_RowClassName="VagasRow" msprop:Generator_UserTableName="Vagas" msprop:Generator_RowEvArgName="VagasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -614,7 +640,7 @@ FROM         Veiculos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Veiculos" msprop:Generator_TableClassName="VeiculosDataTable" msprop:Generator_TableVarName="tableVeiculos" msprop:Generator_TablePropName="Veiculos" msprop:Generator_RowDeletingName="VeiculosRowDeleting" msprop:Generator_RowChangingName="VeiculosRowChanging" msprop:Generator_RowEvHandlerName="VeiculosRowChangeEventHandler" msprop:Generator_RowDeletedName="VeiculosRowDeleted" msprop:Generator_UserTableName="Veiculos" msprop:Generator_RowChangedName="VeiculosRowChanged" msprop:Generator_RowEvArgName="VeiculosRowChangeEvent" msprop:Generator_RowClassName="VeiculosRow">
+        <xs:element name="Veiculos" msprop:Generator_TableClassName="VeiculosDataTable" msprop:Generator_TableVarName="tableVeiculos" msprop:Generator_RowChangedName="VeiculosRowChanged" msprop:Generator_TablePropName="Veiculos" msprop:Generator_RowDeletingName="VeiculosRowDeleting" msprop:Generator_RowChangingName="VeiculosRowChanging" msprop:Generator_RowEvHandlerName="VeiculosRowChangeEventHandler" msprop:Generator_RowDeletedName="VeiculosRowDeleted" msprop:Generator_RowClassName="VeiculosRow" msprop:Generator_UserTableName="Veiculos" msprop:Generator_RowEvArgName="VeiculosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -630,25 +656,9 @@ FROM         Veiculos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ResumoVagas" msprop:Generator_TableClassName="ResumoVagasDataTable" msprop:Generator_TableVarName="tableResumoVagas" msprop:Generator_RowChangedName="ResumoVagasRowChanged" msprop:Generator_TablePropName="ResumoVagas" msprop:Generator_RowDeletingName="ResumoVagasRowDeleting" msprop:Generator_RowChangingName="ResumoVagasRowChanging" msprop:Generator_RowEvHandlerName="ResumoVagasRowChangeEventHandler" msprop:Generator_RowDeletedName="ResumoVagasRowDeleted" msprop:Generator_RowClassName="ResumoVagasRow" msprop:Generator_UserTableName="ResumoVagas" msprop:Generator_RowEvArgName="ResumoVagasRowChangeEvent">
+        <xs:element name="Clientes1" msprop:Generator_TableClassName="Clientes1DataTable" msprop:Generator_TableVarName="tableClientes1" msprop:Generator_TablePropName="Clientes1" msprop:Generator_RowDeletingName="Clientes1RowDeleting" msprop:Generator_RowChangingName="Clientes1RowChanging" msprop:Generator_RowEvHandlerName="Clientes1RowChangeEventHandler" msprop:Generator_RowDeletedName="Clientes1RowDeleted" msprop:Generator_UserTableName="Clientes1" msprop:Generator_RowChangedName="Clientes1RowChanged" msprop:Generator_RowEvArgName="Clientes1RowChangeEvent" msprop:Generator_RowClassName="Clientes1Row">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
-              <xs:element name="Referencia" msprop:Generator_ColumnVarNameInTable="columnReferencia" msprop:Generator_ColumnPropNameInRow="Referencia" msprop:Generator_ColumnPropNameInTable="ReferenciaColumn" msprop:Generator_UserColumnName="Referencia" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2147483647" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="DataInicio" msprop:Generator_ColumnVarNameInTable="columnDataInicio" msprop:Generator_ColumnPropNameInRow="DataInicio" msprop:Generator_ColumnPropNameInTable="DataInicioColumn" msprop:Generator_UserColumnName="DataInicio" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Placa" msprop:Generator_ColumnVarNameInTable="columnPlaca" msprop:Generator_ColumnPropNameInRow="Placa" msprop:Generator_ColumnPropNameInTable="PlacaColumn" msprop:Generator_UserColumnName="Placa" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2147483647" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="Nome" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_UserColumnName="Nome" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -656,13 +666,21 @@ FROM         Veiculos INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" minOccurs="0">
+              <xs:element name="Cpf" msprop:Generator_ColumnVarNameInTable="columnCpf" msprop:Generator_ColumnPropNameInRow="Cpf" msprop:Generator_ColumnPropNameInTable="CpfColumn" msprop:Generator_UserColumnName="Cpf" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Telefone" msprop:Generator_ColumnVarNameInTable="columnTelefone" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_UserColumnName="Telefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -701,20 +719,21 @@ FROM         Veiculos INNER JOIN
       <xs:selector xpath=".//mstns:Veiculos" />
       <xs:field xpath="mstns:Id" />
     </xs:unique>
-    <xs:unique name="ResumoVagas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:ResumoVagas" />
+    <xs:unique name="Clientes1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Clientes1" />
       <xs:field xpath="mstns:Id" />
     </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_dbo.Modeloes_dbo.Marca_Marca_Id" msdata:parent="Marca" msdata:child="Modelos" msdata:parentkey="Id" msdata:childkey="Marca_Id" msprop:Generator_UserChildTable="Modelos" msprop:Generator_ChildPropName="GetModelosRows" msprop:Generator_UserRelationName="FK_dbo.Modeloes_dbo.Marca_Marca_Id" msprop:Generator_ParentPropName="MarcaRow" msprop:Generator_RelationVarName="_relationFK_dbo_Modeloes_dbo_Marca_Marca_Id" msprop:Generator_UserParentTable="Marca" />
-      <msdata:Relationship name="FK_dbo.Servicoes_dbo.Vagas_Vaga_Id" msdata:parent="Vagas" msdata:child="Servicos" msdata:parentkey="Id" msdata:childkey="Vaga_Id" msprop:Generator_UserChildTable="Servicos" msprop:Generator_ChildPropName="GetServicosRows" msprop:Generator_UserRelationName="FK_dbo.Servicoes_dbo.Vagas_Vaga_Id" msprop:Generator_RelationVarName="_relationFK_dbo_Servicoes_dbo_Vagas_Vaga_Id" msprop:Generator_UserParentTable="Vagas" msprop:Generator_ParentPropName="VagasRow" />
-      <msdata:Relationship name="FK_dbo.Servicoes_dbo.Veiculoes_Veiculo_Id" msdata:parent="Veiculos" msdata:child="Servicos" msdata:parentkey="Id" msdata:childkey="Veiculo_Id" msprop:Generator_UserChildTable="Servicos" msprop:Generator_ChildPropName="GetServicosRows" msprop:Generator_UserRelationName="FK_dbo.Servicoes_dbo.Veiculoes_Veiculo_Id" msprop:Generator_RelationVarName="_relationFK_dbo_Servicoes_dbo_Veiculoes_Veiculo_Id" msprop:Generator_UserParentTable="Veiculos" msprop:Generator_ParentPropName="VeiculosRow" />
-      <msdata:Relationship name="FK_dbo.Servicos_dbo.Clientes_Cliente_Id" msdata:parent="Clientes" msdata:child="Servicos" msdata:parentkey="Id" msdata:childkey="Cliente_Id" msprop:Generator_UserChildTable="Servicos" msprop:Generator_ChildPropName="GetServicosRows" msprop:Generator_UserRelationName="FK_dbo.Servicos_dbo.Clientes_Cliente_Id" msprop:Generator_ParentPropName="ClientesRow" msprop:Generator_RelationVarName="_relationFK_dbo_Servicos_dbo_Clientes_Cliente_Id" msprop:Generator_UserParentTable="Clientes" />
-      <msdata:Relationship name="FK_dbo.Veiculoes_dbo.Clientes_Cliente_Id" msdata:parent="Clientes" msdata:child="Veiculos" msdata:parentkey="Id" msdata:childkey="Cliente_Id" msprop:Generator_UserChildTable="Veiculos" msprop:Generator_ChildPropName="GetVeiculosRows" msprop:Generator_UserRelationName="FK_dbo.Veiculoes_dbo.Clientes_Cliente_Id" msprop:Generator_ParentPropName="ClientesRow" msprop:Generator_RelationVarName="_relationFK_dbo_Veiculoes_dbo_Clientes_Cliente_Id" msprop:Generator_UserParentTable="Clientes" />
-      <msdata:Relationship name="FK_dbo.Veiculoes_dbo.Modeloes_Modelo_Id" msdata:parent="Modelos" msdata:child="Veiculos" msdata:parentkey="Id" msdata:childkey="Modelo_Id" msprop:Generator_UserChildTable="Veiculos" msprop:Generator_ChildPropName="GetVeiculosRows" msprop:Generator_UserRelationName="FK_dbo.Veiculoes_dbo.Modeloes_Modelo_Id" msprop:Generator_ParentPropName="ModelosRow" msprop:Generator_RelationVarName="_relationFK_dbo_Veiculoes_dbo_Modeloes_Modelo_Id" msprop:Generator_UserParentTable="Modelos" />
-      <msdata:Relationship name="FK_dbo.Modeloes_dbo.Marca_Marca_Id1" msdata:parent="ResumoVagas" msdata:child="Modelos" msdata:parentkey="Id" msdata:childkey="Marca_Id" msprop:Generator_UserChildTable="Modelos" msprop:Generator_ChildPropName="GetModelosRows" msprop:Generator_UserRelationName="FK_dbo.Modeloes_dbo.Marca_Marca_Id1" msprop:Generator_ParentPropName="ResumoVagasRow" msprop:Generator_RelationVarName="_relationFK_dbo_Modeloes_dbo_Marca_Marca_Id1" msprop:Generator_UserParentTable="ResumoVagas" />
+      <msdata:Relationship name="FK_dbo.Modelos_dbo.Marca_Marca_Id" msdata:parent="Marca" msdata:child="Modelos" msdata:parentkey="Id" msdata:childkey="Marca_Id" msprop:Generator_UserChildTable="Modelos" msprop:Generator_ChildPropName="GetModelosRows" msprop:Generator_UserRelationName="FK_dbo.Modelos_dbo.Marca_Marca_Id" msprop:Generator_RelationVarName="_relationFK_dbo_Modelos_dbo_Marca_Marca_Id" msprop:Generator_UserParentTable="Marca" msprop:Generator_ParentPropName="MarcaRow" />
+      <msdata:Relationship name="FK_dbo.Servicos_dbo.Clientes_Cliente_Id" msdata:parent="Clientes" msdata:child="Servicos" msdata:parentkey="Id" msdata:childkey="Cliente_Id" msprop:Generator_UserChildTable="Servicos" msprop:Generator_ChildPropName="GetServicosRows" msprop:Generator_UserRelationName="FK_dbo.Servicos_dbo.Clientes_Cliente_Id" msprop:Generator_RelationVarName="_relationFK_dbo_Servicos_dbo_Clientes_Cliente_Id" msprop:Generator_UserParentTable="Clientes" msprop:Generator_ParentPropName="ClientesRow" />
+      <msdata:Relationship name="FK_dbo.Servicos_dbo.Vagas_Vaga_Id" msdata:parent="Vagas" msdata:child="Servicos" msdata:parentkey="Id" msdata:childkey="Vaga_Id" msprop:Generator_UserChildTable="Servicos" msprop:Generator_ChildPropName="GetServicosRows" msprop:Generator_UserRelationName="FK_dbo.Servicos_dbo.Vagas_Vaga_Id" msprop:Generator_ParentPropName="VagasRow" msprop:Generator_RelationVarName="_relationFK_dbo_Servicos_dbo_Vagas_Vaga_Id" msprop:Generator_UserParentTable="Vagas" />
+      <msdata:Relationship name="FK_dbo.Servicos_dbo.Veiculos_Veiculo_Id" msdata:parent="Veiculos" msdata:child="Servicos" msdata:parentkey="Id" msdata:childkey="Veiculo_Id" msprop:Generator_UserChildTable="Servicos" msprop:Generator_ChildPropName="GetServicosRows" msprop:Generator_UserRelationName="FK_dbo.Servicos_dbo.Veiculos_Veiculo_Id" msprop:Generator_ParentPropName="VeiculosRow" msprop:Generator_RelationVarName="_relationFK_dbo_Servicos_dbo_Veiculos_Veiculo_Id" msprop:Generator_UserParentTable="Veiculos" />
+      <msdata:Relationship name="FK_dbo.Veiculos_dbo.Clientes_Cliente_Id" msdata:parent="Clientes" msdata:child="Veiculos" msdata:parentkey="Id" msdata:childkey="Cliente_Id" msprop:Generator_UserChildTable="Veiculos" msprop:Generator_ChildPropName="GetVeiculosRows" msprop:Generator_UserRelationName="FK_dbo.Veiculos_dbo.Clientes_Cliente_Id" msprop:Generator_RelationVarName="_relationFK_dbo_Veiculos_dbo_Clientes_Cliente_Id" msprop:Generator_UserParentTable="Clientes" msprop:Generator_ParentPropName="ClientesRow" />
+      <msdata:Relationship name="FK_dbo.Veiculos_dbo.Modelos_Modelo_Id" msdata:parent="Modelos" msdata:child="Veiculos" msdata:parentkey="Id" msdata:childkey="Modelo_Id" msprop:Generator_UserChildTable="Veiculos" msprop:Generator_ChildPropName="GetVeiculosRows" msprop:Generator_UserRelationName="FK_dbo.Veiculos_dbo.Modelos_Modelo_Id" msprop:Generator_RelationVarName="_relationFK_dbo_Veiculos_dbo_Modelos_Modelo_Id" msprop:Generator_UserParentTable="Modelos" msprop:Generator_ParentPropName="ModelosRow" />
+      <msdata:Relationship name="FK_dbo.Servicos_dbo.Clientes_Cliente_Id1" msdata:parent="Clientes1" msdata:child="Servicos" msdata:parentkey="Id" msdata:childkey="Cliente_Id" msprop:Generator_UserChildTable="Servicos" msprop:Generator_ChildPropName="GetServicosRows" msprop:Generator_UserRelationName="FK_dbo.Servicos_dbo.Clientes_Cliente_Id1" msprop:Generator_RelationVarName="_relationFK_dbo_Servicos_dbo_Clientes_Cliente_Id1" msprop:Generator_UserParentTable="Clientes1" msprop:Generator_ParentPropName="Clientes1Row" />
+      <msdata:Relationship name="FK_dbo.Veiculos_dbo.Clientes_Cliente_Id1" msdata:parent="Clientes1" msdata:child="Veiculos" msdata:parentkey="Id" msdata:childkey="Cliente_Id" msprop:Generator_UserChildTable="Veiculos" msprop:Generator_ChildPropName="GetVeiculosRows" msprop:Generator_UserRelationName="FK_dbo.Veiculos_dbo.Clientes_Cliente_Id1" msprop:Generator_RelationVarName="_relationFK_dbo_Veiculos_dbo_Clientes_Cliente_Id1" msprop:Generator_UserParentTable="Clientes1" msprop:Generator_ParentPropName="Clientes1Row" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

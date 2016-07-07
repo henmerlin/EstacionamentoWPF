@@ -19,14 +19,7 @@ namespace Estacionamento.View
 
         private void ListarVagas_Load(object sender, EventArgs e)
         {
-
-            
-
-
-            vendasCompletoTableAdapter1.Fill(dsBanco.VendasCompleto, 1);
             this.reportViewer1.RefreshReport();
-
-
         }
 
     }

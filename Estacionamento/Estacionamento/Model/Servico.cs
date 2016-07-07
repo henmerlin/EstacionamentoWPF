@@ -26,6 +26,10 @@ namespace Estacionamento.Model
 
         public Cliente Cliente { get; set; }
 
+        public double ValorTotal { get; set; }
+
+        public double HorasTotal { get; set; }
+
         public Servico()
         {
             Veiculo = new Veiculo();

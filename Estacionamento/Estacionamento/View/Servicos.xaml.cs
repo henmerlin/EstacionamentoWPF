@@ -73,7 +73,7 @@ namespace Estacionamento.View
                     lbMarca.Content = s.Veiculo.Modelo.Marca.Nome;
                     lbModelo.Content = s.Veiculo.Modelo.Nome;
                     lbVaga.Content = s.Vaga.Id + " " + s.Vaga.Referencia;
-                    lbDuracao.Content = Math.Round((DateTime.Now - s.DataInicio).TotalHours, 2);
+                    lbDuracao.Content = Math.Round((DateTime.Now - s.DataInicio).TotalHours, 3);
                     HabilitarBotoes();
                 }
                 else
@@ -147,11 +147,15 @@ namespace Estacionamento.View
             {
 
                 s.DataFim = DateTime.Now;
+                s.HorasTotal = Math.Round((DateTime.Now - s.DataInicio).TotalHours, 3);
+                s.ValorTotal = s.HorasTotal * 10;
 
-                if (ServicoDAO.RemoverServico(s))
+                if (ServicoDAO.AlterarServico(s))
                 {
-                    MessageBox.Show("Serviço encerrado com sucesso!\n" + 
-                                    "Total de Horas: " + Math.Round((DateTime.Now - s.DataInicio).TotalHours, 2) +".",
+
+                    MessageBox.Show("Serviço encerrado com sucesso!\n" +
+                                    "Total de Horas: " + s.HorasTotal + ".\n" + 
+                                    "Valor Total: " + s.ValorTotal + ".",
                                     "Cadastra Serviço", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else

@@ -33,13 +33,14 @@ namespace Estacionamento.View
         private void GravarServico(object sender, RoutedEventArgs e)
         {
             s = new Servico();
+            Veiculo v = new Veiculo();
+            v.Placa = txtBuscaPlaca.Text;
+            v = VeiculoDAO.VerificarVeiculoPorPlaca(v);
 
-            //Veiculo v = new Veiculo();
-            //v.Placa = txtBuscaPlaca.Text;
-
-            //s.Veiculo = VeiculoDAO.VerificarVeiculoPorPlaca(v);
-            //s.Cliente = s.Veiculo.Cliente;
-            //s.DataInicio = DateTime.Now;
+            s.Veiculo = v;
+            s.Cliente = v.Cliente;
+            s.DataInicio = DateTime.Now;
+            s.DataFim = null;
 
             if (ServicoDAO.AdicionarServico(s))
             {
@@ -59,19 +60,20 @@ namespace Estacionamento.View
         private void Buscar(object sender, RoutedEventArgs e)
         {
             s = new Servico();
-
             Veiculo v = new Veiculo();
-            v.Placa = txtBuscaPlaca.Text;
-
 
             if (!string.IsNullOrEmpty(txtBuscaPlaca.Text))
             {
-                s = ServicoDAO.VerificarServicoPorPlaca(VeiculoDAO.VerificarVeiculoPorPlaca(v));
+                v.Placa = txtBuscaPlaca.Text;
+                s = ServicoDAO.VerificarServicoPorPlacaVeiculo(v);
+
                 if (s != null)
                 {
                     lbCliente.Content = s.Cliente.Nome;
-                    lbMarca.Content = s.Veiculo.Modelo.Nome;
+                    lbMarca.Content = s.Veiculo.Modelo.Marca.Nome;
+                    lbModelo.Content = s.Veiculo.Modelo.Nome;
                     lbVaga.Content = s.Vaga.Id + " " + s.Vaga.Referencia;
+                    lbDuracao.Content = Math.Round((DateTime.Now - s.DataInicio).TotalHours, 2);
                     HabilitarBotoes();
                 }
                 else
@@ -111,29 +113,59 @@ namespace Estacionamento.View
             lbDuracao.Content = "";
             lbMarca.Content = "";
             lbModelo.Content = "";
+            lbVaga.Content = "";
             txtBuscaPlaca.Focus();
         }
 
         private void Remover(object sender, RoutedEventArgs e)
         {
-            //if (MessageBox.Show("Deseja remover o registro?", "Cadastro de Servico",
-            //    MessageBoxButton.YesNo, MessageBoxImage.Question) ==
-            //    MessageBoxResult.Yes)
-            //{
-            //    if (ClienteDAO.RemoverCliente(c))
-            //    {
-            //        MessageBox.Show("Cliente removido com sucesso", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Information);
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Cliente não removido!", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Error);
-            //    }
-            //    DesabilitarBotoes();
-            //}
-            //else
-            //{
-            //    DesabilitarBotoes();
-            //}
+            if (MessageBox.Show("Deseja remover o registro?", "Cadastro de Servico",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) ==
+                MessageBoxResult.Yes)
+            {
+                if (ServicoDAO.RemoverServico(s))
+                {
+                    MessageBox.Show("Serviço removido com sucesso", "Cadastra Serviço", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Serviço não removido!", "Cadastra Serviço", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                DesabilitarBotoes();
+            }
+            else
+            {
+                DesabilitarBotoes();
+            }
         }
+
+        private void Encerrar(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Deseja encerrar o Serviço?", "Cadastro de Serviço",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) ==
+                MessageBoxResult.Yes)
+            {
+
+                s.DataFim = DateTime.Now;
+
+
+
+                if (ServicoDAO.RemoverServico(s))
+                {
+                    MessageBox.Show("Serviço removido com sucesso", "Cadastra Serviço", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Serviço não removido!", "Cadastra Serviço", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                DesabilitarBotoes();
+            }
+            else
+            {
+                DesabilitarBotoes();
+            }
+        }
+        
+
     }
 }

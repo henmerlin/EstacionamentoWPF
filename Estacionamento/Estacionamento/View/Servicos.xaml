@@ -9,7 +9,7 @@
         <Separator HorizontalAlignment="Left" Height="52" Margin="0,22,0,0" VerticalAlignment="Top" Width="476"/>
         <Label Content="Cliente:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="10,59,0,0" RenderTransformOrigin="0.604,-0.538"/>
         <Button x:Name="btn_save" Content="Iniciar Serviço" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="374,335,0,0" Height="23" Click="GravarServico"/>
-        <Button x:Name="btn_edit" Content="Encerrar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="264,335,0,0" Height="23"/>
+        <Button x:Name="btn_edit" Content="Encerrar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="264,335,0,0" Height="23" Click="Encerrar"/>
         <Button x:Name="btn_remove" Content="Remover" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="156,335,0,0" Height="23" Click="Remover"/>
         <Button x:Name="btn_cancel" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="44,335,0,0" Height="23" Click="Cancelar"/>
         <Label Content="Modelo:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="10,115,0,0" RenderTransformOrigin="0.604,-0.538"/>

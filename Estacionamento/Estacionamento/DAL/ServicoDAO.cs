@@ -10,7 +10,7 @@ namespace Estacionamento.DAL
     class ServicoDAO
     {
 
-        
+
         private static Context ctx = Singleton.Instance.Context;
 
         public static bool AdicionarServico(Servico s)
@@ -27,9 +27,14 @@ namespace Estacionamento.DAL
             }
         }
 
-        public static Servico VerificarServicoPorPlaca(Veiculo v)
+        public static Servico VerificarServicoPorPlacaVeiculo(Veiculo v)
         {
-            return ctx.Servicos.FirstOrDefault(x => x.Veiculo.Placa.Equals(v.Placa));
+            return ctx.Servicos.Include("Vaga").
+                            Include("Veiculo").
+                            Include("Veiculo.Modelo").
+                            Include("Veiculo.Modelo.Marca").
+                            Include("Cliente").
+                            SingleOrDefault(x => x.Veiculo.Placa.Equals(v.Placa));
         }
 
         public static List<Servico> RetornarServico()
@@ -52,11 +57,18 @@ namespace Estacionamento.DAL
         }
 
 
-
-
-
-
+        public static bool AlterarServico(Servico s)
+        {
+            try
+            {
+                ctx.Entry(s).State = System.Data.Entity.EntityState.Modified;
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return true;
+            }
         }
-
-    
+    }
 }

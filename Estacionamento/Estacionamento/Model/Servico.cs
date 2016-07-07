@@ -18,7 +18,7 @@ namespace Estacionamento.Model
 
         public DateTime DataInicio { get; set; }
 
-        public DateTime DataFim { get; set; }
+        public DateTime? DataFim { get; set; }
 
         public Vaga Vaga { get; set; }
 

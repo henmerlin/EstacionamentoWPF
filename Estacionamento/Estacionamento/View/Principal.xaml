@@ -11,6 +11,7 @@
                 <MenuItem Header="Modelos" HorizontalAlignment="Left" Width="160" Click="AbrirWindowModelos"/>
                 <Separator HorizontalAlignment="Left"  Width="160"/>
                 <MenuItem Header="Vagas" HorizontalAlignment="Left" Width="160" Click="AbrirWindowVagas"/>
+                <MenuItem Header="Servicos" HorizontalAlignment="Left" Width="160" Click="AbrirWindowServico"/>
             </MenuItem>
 
             <MenuItem Header="Relatórios">

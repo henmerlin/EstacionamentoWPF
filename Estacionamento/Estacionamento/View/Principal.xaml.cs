@@ -49,9 +49,10 @@ namespace Estacionamento.View
             form.ShowDialog();
         }
 
-        private void Cadastro_Funcionario(object sender, RoutedEventArgs e)
+        private void AbrirWindowServico(object sender, RoutedEventArgs e)
         {
-
+            Window form = new Servicos();
+            form.ShowDialog();
         }
 
 

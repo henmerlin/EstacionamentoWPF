@@ -32,7 +32,19 @@ namespace Estacionamento.DAL
             return ctx.Servicos.ToList();
         }
 
-
+        public static bool RemoverServico(Servico s)
+        {
+            try
+            {
+                ctx.Servicos.Remove(s);
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
 
 

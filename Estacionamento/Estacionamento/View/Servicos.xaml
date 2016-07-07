@@ -4,12 +4,12 @@
         Title="Servicos" Height="399.296" Width="484.119" Margin="3">
     <Grid>
         <TextBox x:Name="txtBuscaServico" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Margin="141,10,0,0"/>
-        <Button Content="Buscar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="344,10,0,0" Height="23"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="344,10,0,0" Height="23" Click="Buscar"/>
         <Label Content="Buscar Servico Por Vaga:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="163" Margin="5,7,0,0"/>
         <Separator HorizontalAlignment="Left" Height="52" Margin="0,22,0,0" VerticalAlignment="Top" Width="476"/>
         <Label Content="Cliente:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="24,59,0,0" RenderTransformOrigin="0.604,-0.538"/>
         <TextBox x:Name="txt_cliente" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Margin="82,62,0,0"/>
-        <Button Content="Gravar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="374,335,0,0" Height="23"/>
+        <Button Content="Gravar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="374,335,0,0" Height="23" Click="Gravar"/>
         <Button Content="Alterar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="264,335,0,0" Height="23"/>
         <Button Content="Remover" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="156,335,0,0" Height="23"/>
         <Button Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="44,335,0,0" Height="23"/>

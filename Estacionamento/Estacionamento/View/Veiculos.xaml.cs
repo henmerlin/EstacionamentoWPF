@@ -21,6 +21,8 @@ namespace Estacionamento.View
 
         private Veiculo v = new Veiculo();
 
+        private Marca marca = new Marca();
+
         public Veiculos()
         {
             InitializeComponent();
@@ -32,6 +34,11 @@ namespace Estacionamento.View
             comboBoxCliente.ItemsSource = ClienteDAO.RetornarLista();
             comboBoxCliente.DisplayMemberPath = "Nome";
             comboBoxCliente.SelectedValuePath = "Id";
+
+            comboBoxModelo.ItemsSource = ModeloDAO.RetornarLista();
+            comboBoxModelo.DisplayMemberPath = "Nome";
+            comboBoxModelo.SelectedValuePath = "Id";
+
 
         }
 
@@ -101,6 +108,10 @@ namespace Estacionamento.View
             btnRemover.IsEnabled = false;
             btnCancelar.IsEnabled = false;
             btnGravar.IsEnabled = true;
+            comboBoxMarca.SelectedItem = "";
+            comboBoxModelo.SelectedItem = "";
+            comboBoxCliente.SelectedItem = "";
+            txtPlaca.Text = "";
             txtPlaca.Clear();
         }
 
@@ -161,12 +172,11 @@ namespace Estacionamento.View
         private void comboBoxMarca_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-            Marca m = (Marca) comboBoxMarca.SelectedItem;
-            m = MarcaDAO.VerificarMarcaPorNome(m);
-            comboBoxModelo.ItemsSource = m.ListaDeModelos;
+            marca = MarcaDAO.VerificarMarcaPorNome((Marca)comboBoxMarca.SelectedItem);
+
+            comboBoxModelo.ItemsSource = marca.ListaDeModelos;
             comboBoxModelo.DisplayMemberPath = "Nome";
             comboBoxModelo.SelectedValuePath = "Id";
-
         }
     }
 }

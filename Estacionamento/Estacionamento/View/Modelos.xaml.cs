@@ -40,7 +40,7 @@ namespace Estacionamento.View
             m = new Modelo();
             m.Nome = txtNomeModelo.Text;
 
-            marca = MarcaDAO.VerificarMarcaPorNome((Marca)comboBoxMarca.SelectedItem);
+            marca = MarcaDAO.VerificarMarcaPorNome((Marca) comboBoxMarca.SelectedItem);
             m.Marca = marca;
 
             if (ModeloDAO.AdicionarModelo(m))
@@ -69,18 +69,18 @@ namespace Estacionamento.View
                 if (m != null)
                 {
                     txtNomeModelo.Text = m.Nome;
-                    comboBoxMarca.SelectedItem = m.Nome;
+                    comboBoxMarca.SelectedItem = m.Marca;
                     HabilitarBotoes();
                 }
                 else
                 {
-                    MessageBox.Show("Cliente não encontrado!", "Cadastro de Cliente",
+                    MessageBox.Show("Modelo não encontrado!", "Cadastro de Modelo",
                     MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Favor preencher o campo da busca", "Cadastro de Cliente",
+                MessageBox.Show("Favor preencher o campo da busca", "Cadastro de Modelo",
                 MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
@@ -100,6 +100,7 @@ namespace Estacionamento.View
             btnCancelar.IsEnabled = false;
             btnGravar.IsEnabled = true;
             txtNomeModelo.Clear();
+            comboBoxMarca.Items.Clear();
             txtNomeModelo.Focus();
         }
 

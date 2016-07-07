@@ -162,12 +162,10 @@ namespace Estacionamento.View
         {
 
             Marca m = (Marca) comboBoxMarca.SelectedItem;
-
-            comboBoxModelo.ItemsSource = ModeloDAO.VerificarModeloPorMarca(m);
-            comboBoxMarca.DisplayMemberPath = "Nome";
-            comboBoxMarca.SelectedValuePath = "Id";
-
-            MessageBox.Show(m.Nome);
+            m = MarcaDAO.VerificarMarcaPorNome(m);
+            comboBoxModelo.ItemsSource = m.ListaDeModelos;
+            comboBoxModelo.DisplayMemberPath = "Nome";
+            comboBoxModelo.SelectedValuePath = "Id";
 
         }
     }

@@ -1,0 +1,37 @@
+﻿<Window x:Class="Estacionamento.View.Veiculos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Veiculos" Height="281.25" Width="310" Topmost="True" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+
+        <Label Content="Placa:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBuscarPlaca" HorizontalAlignment="Left" Height="23" Margin="54,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="237" TabIndex="0"/>
+
+        <Separator HorizontalAlignment="Left" Height="4" Margin="10,65,0,0" VerticalAlignment="Top" Width="281"/>
+
+
+        <Label Content="Placa:" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPlaca" HorizontalAlignment="Left" Height="23" Margin="54,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="237" TabIndex="0"/>
+
+        <Label Content="Marca Veículo:" HorizontalAlignment="Left" Margin="9,134,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name="btnGravar" Content="Gravar" HorizontalAlignment="Left" Margin="230,224,0,0" VerticalAlignment="Top" Width="60" TabIndex="4" Click="btnGravar_Click"/>
+        <Button x:Name="btnBuscarMarca" Content="Buscar" HorizontalAlignment="Left" Margin="216,38,0,0" VerticalAlignment="Top" Width="75" TabIndex="4" Click="btnBuscarCliente_Click"/>
+        <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="155,224,0,0" VerticalAlignment="Top" Width="60" TabIndex="4" IsEnabled="False" Click="btnAlterar_Click"/>
+        <Button x:Name="btnRemover" Content="Remover" HorizontalAlignment="Left" Margin="85,224,0,0" VerticalAlignment="Top" Width="60" TabIndex="4" IsEnabled="False" Click="btnRemover_Click"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="10,224,0,0" VerticalAlignment="Top" Width="60" TabIndex="4" IsEnabled="False" Click="btnCancelar_Click"/>
+        
+        
+        
+        <ComboBox x:Name="comboBoxMarca" HorizontalAlignment="Left" Margin="95,136,0,0" VerticalAlignment="Top" Width="196" SelectionChanged="comboBoxMarca_SelectionChanged">
+            <ComboBoxItem Content="" HorizontalAlignment="Left" Width="194"/>
+        </ComboBox>
+        
+        <Label Content="Modelo Veículo:" HorizontalAlignment="Left" Margin="9,162,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxModelo" HorizontalAlignment="Left" Margin="95,162,0,0" VerticalAlignment="Top" Width="196"/>
+        <Label Content="Cliente:" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxCliente" HorizontalAlignment="Left" Margin="57,113,0,0" VerticalAlignment="Top" Width="235" RenderTransformOrigin="0.483,-0.043"/>
+    </Grid>
+
+</Window>

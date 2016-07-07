@@ -55,6 +55,12 @@ namespace Estacionamento.View
             form.ShowDialog();
         }
 
+        private void AbrirWindowVeiculos(object sender, RoutedEventArgs e)
+        {
+            Window form = new Veiculos();
+            form.ShowDialog();
+        }
+
 
     }
 }

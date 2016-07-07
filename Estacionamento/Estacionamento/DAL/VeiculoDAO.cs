@@ -12,7 +12,7 @@ namespace Estacionamento.DAL
 
         private static Context ctx = Singleton.Instance.Context;
 
-        public static bool AdicionarVaga(Veiculo v)
+        public static bool AdicionarVeiculo(Veiculo v)
         {
             try
             {
@@ -26,10 +26,10 @@ namespace Estacionamento.DAL
             }
         }
 
-        //public static Veiculo VerificarVeiculoPorNome(Veiculo v)
-        //{
-        //   return ctx.Vagas.FirstOrDefault(x => v.nome.Equals(v.Id));
-        //}
+        public static Veiculo VerificarVeiculoPorPlaca(Veiculo v)
+        {
+           return ctx.Veiculos.FirstOrDefault(x => v.Placa.Equals(v.Placa));
+        }
 
         public static List<Veiculo> RetornarLista()
         {

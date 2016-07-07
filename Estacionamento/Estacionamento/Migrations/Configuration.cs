@@ -9,7 +9,7 @@ namespace Estacionamento.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(Estacionamento.DAL.Context context)

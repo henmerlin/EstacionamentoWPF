@@ -18,5 +18,7 @@ namespace Estacionamento.DAL
 
         public string Telefone { get; set; }
 
+        public List<Veiculo> ListaDeVeiculos { get; set; }
+
     }
 }

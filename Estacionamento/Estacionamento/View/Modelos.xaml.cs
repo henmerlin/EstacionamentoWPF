@@ -24,11 +24,13 @@ namespace Estacionamento.View
 
         private Modelo m = new Modelo();
 
+        private Marca marca = new Marca();
+
         public Modelos()
         {
             InitializeComponent();
 
-            comboBoxMarca.ItemsSource = ModeloDAO.RetornarLista();
+            comboBoxMarca.ItemsSource = MarcaDAO.RetornarLista();
             comboBoxMarca.DisplayMemberPath = "Nome";
             comboBoxMarca.SelectedValuePath = "Id";
 
@@ -36,51 +38,52 @@ namespace Estacionamento.View
 
         private void btnGravar_Click(object sender, RoutedEventArgs e)
         {
-            //m = new Modelo();
+            m = new Modelo();
+            m.Nome = txtNomeModelo.Text;
 
-            //m.Nome = txtNomeModelo.Text;
+            marca = MarcaDAO.VerificarMarcaPorNome((Marca)comboBoxMarca.SelectedItem);
+            m.Marca = marca;
 
+            if (ModeloDAO.AdicionarModelo(m))
+            {
+                MessageBox.Show("Gravado com sucesso!", "Cadastro de Modelo",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível gravar!", "Cadastro de Modelo",
+                MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
-            //if (ClienteDAO.AdicionarCliente(c))
-            //{
-            //    MessageBox.Show("Gravado com sucesso!", "Cadastro de Cliente",
-            //    MessageBoxButton.OK, MessageBoxImage.Information);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Não foi possível gravar!", "Cadastro de Cliente",
-            //    MessageBoxButton.OK, MessageBoxImage.Error);
-            //}
-
-            //txtNome.Text = "";
-            //txtNome.Focus();
+            txtNomeModelo.Text = "";
+            txtNomeModelo.Focus();
         }
 
-        private void btnBuscarCliente_Click(object sender, RoutedEventArgs e)
+        private void btnBuscarModelo_Click(object sender, RoutedEventArgs e)
         {
-            //c = new Cliente();
-            //if (!string.IsNullOrEmpty(txtBuscarCliente.Text))
-            //{
-            //    c.Cpf = txtBuscarCliente.Text;
-            //    c = ClienteDAO.VerificarClientePorCPF(c);
-            //    if (c != null)
-            //    {
-            //        txtNome.Text = c.Nome;
-            //        txtCpf.Text = c.Cpf;
-            //        txtTelefone.Text = c.Telefone;
-            //        HabilitarBotoes();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Cliente não encontrado!", "Cadastro de Cliente",
-            //        MessageBoxButton.OK, MessageBoxImage.Information);
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Favor preencher o campo da busca", "Cadastro de Cliente",
-            //    MessageBoxButton.OK, MessageBoxImage.Information);
-            //}
+            m = new Modelo();
+
+            if (!string.IsNullOrEmpty(txtBuscar.Text))
+            {
+                m.Nome = txtBuscar.Text;
+                m = ModeloDAO.VerificarModeloPorNome(m);
+                if (m != null)
+                {
+                    txtNomeModelo.Text = m.Nome;
+                    comboBoxMarca.SelectedItem = m.Nome;
+                    HabilitarBotoes();
+                }
+                else
+                {
+                    MessageBox.Show("Cliente não encontrado!", "Cadastro de Cliente",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Favor preencher o campo da busca", "Cadastro de Cliente",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         public void HabilitarBotoes()
@@ -93,15 +96,12 @@ namespace Estacionamento.View
 
         public void DesabilitarBotoes()
         {
-            //btnAlterar.IsEnabled = false;
-            //btnRemover.IsEnabled = false;
-            //btnCancelar.IsEnabled = false;
-            //btnGravar.IsEnabled = true;
-            //txtBuscarCliente.Clear();
-            //txtCpf.Clear();
-            //txtNome.Clear();
-            //txtTelefone.Clear();
-            //txtBuscarCliente.Focus();
+            btnAlterar.IsEnabled = false;
+            btnRemover.IsEnabled = false;
+            btnCancelar.IsEnabled = false;
+            btnGravar.IsEnabled = true;
+            txtNomeModelo.Clear();
+            txtNomeModelo.Focus();
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
@@ -111,57 +111,53 @@ namespace Estacionamento.View
 
         private void btnRemover_Click(object sender, RoutedEventArgs e)
         {
-            //if (MessageBox.Show("Deseja remover o registro?", "Cadastro de Cliente",
-            //    MessageBoxButton.YesNo, MessageBoxImage.Question) ==
-            //    MessageBoxResult.Yes)
-            //{
-            //    if (ClienteDAO.RemoverCliente(c))
-            //    {
-            //        MessageBox.Show("Cliente removido com sucesso", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Information);
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Cliente não removido!", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Error);
-            //    }
-            //    DesabilitarBotoes();
-            //}
-            //else
-            //{
-            //    DesabilitarBotoes();
-            //}
+            if (MessageBox.Show("Deseja remover o registro?", "Cadastro de Modelo",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) ==
+                MessageBoxResult.Yes)
+            {
+                if (ModeloDAO.RemoverModelo(m))
+                {
+                    MessageBox.Show("Modelo removido com sucesso", "Cadastra Modelo", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Modelo não removido!", "Cadastra Modelo", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                DesabilitarBotoes();
+            }
+            else
+            {
+                DesabilitarBotoes();
+            }
         }
 
         private void btnAlterar_Click(object sender, RoutedEventArgs e)
         {
 
-            //if (MessageBox.Show("Deseja alterar o registro?", "Cadastro de Cliente",
-            //    MessageBoxButton.YesNo, MessageBoxImage.Question) ==
-            //    MessageBoxResult.Yes)
-            //{
-            //    c.Nome = txtNome.Text;
-            //    c.Cpf = txtCpf.Text;
-            //    c.Telefone = txtTelefone.Text;
-            //    if (ClienteDAO.AlterarCliente(c))
-            //    {
-            //        MessageBox.Show("Cliente alterado com sucesso", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Information);
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Cliente não alterado!", "Cadastra Cliente", MessageBoxButton.OK, MessageBoxImage.Error);
-            //    }
-            //    DesabilitarBotoes();
-            //}
-            //else
-            //{
-            //    DesabilitarBotoes();
-            //}
+            if (MessageBox.Show("Deseja alterar o registro?", "Cadastro de Modelo",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) ==
+                MessageBoxResult.Yes)
+            {
+
+                m.Nome = txtNomeModelo.Text;
+                marca = MarcaDAO.VerificarMarcaPorNome((Marca)comboBoxMarca.SelectedItem);
+                m.Marca = marca;
+
+                if (ModeloDAO.AlterarModelo(m))
+                {
+                    MessageBox.Show("Modelo alterado com sucesso", "Cadastra Modelo", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Modelo não alterado!", "Cadastra Modelo", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                DesabilitarBotoes();
+            }
+            else
+            {
+                DesabilitarBotoes();
+            }
         }
 
-        private void comboBoxMarca_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Marca ma = new Marca();
-            ma.Nome = comboBoxMarca.Text;
-            MessageBox.Show(ma.Nome);
-        }
     }
 }

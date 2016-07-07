@@ -33,6 +33,9 @@ namespace Estacionamento.View
         {
             s = new Servico();
             s.Cliente.Nome = txt_cliente.Text;
+            s.Veiculo.Placa = txt_Placa.Text;
+            s.Veiculo.Modelo.Marca.Nome = txt_Marca.Text;
+            s.Veiculo.Modelo.Nome = txt_Modelo.Text;
         
 
 

@@ -154,10 +154,6 @@
     <Compile Include="DAL\MarcaDAO.cs" />
     <Compile Include="DAL\VeiculoDAO.cs" />
     <Compile Include="DAL\Context.cs" />
-    <Compile Include="Migrations\201606282300412_Inicio.cs" />
-    <Compile Include="Migrations\201606282300412_Inicio.Designer.cs">
-      <DependentUpon>201606282300412_Inicio.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Servico.cs" />
     <Compile Include="Model\Singleton.cs" />
@@ -194,9 +190,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201606282300412_Inicio.resx">
-      <DependentUpon>201606282300412_Inicio.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

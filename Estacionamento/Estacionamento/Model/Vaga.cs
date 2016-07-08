@@ -20,5 +20,6 @@ namespace Estacionamento.DAL
 
         public bool Ocupada { get; set; }
 
+
     }
 }

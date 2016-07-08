@@ -27,6 +27,11 @@ namespace Estacionamento.View
         public Servicos()
         {
             InitializeComponent();
+
+            comboBoxPlaca.ItemsSource = VeiculoDAO.RetornarLista();
+            comboBoxPlaca.DisplayMemberPath = "Placa";
+            comboBoxPlaca.SelectedValuePath = "Placa";
+
         }
 
 
@@ -34,9 +39,7 @@ namespace Estacionamento.View
         {
             s = new Servico();
             Veiculo v = new Veiculo();
-            v.Placa = txtBuscaPlaca.Text;
-
-            v = VeiculoDAO.VerificarVeiculoPorPlaca(v);
+            v = VeiculoDAO.VerificarVeiculoPorPlaca((Veiculo)comboBoxPlaca.SelectedItem);
 
             if (v != null)
             {
@@ -66,18 +69,18 @@ namespace Estacionamento.View
                 MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            txtBuscaPlaca.Text = "";
-            txtBuscaPlaca.Focus();
+            comboBoxPlaca.Focus();
 
         }
         private void Buscar(object sender, RoutedEventArgs e)
         {
             s = new Servico();
             Veiculo v = new Veiculo();
+            v = VeiculoDAO.VerificarVeiculoPorPlaca((Veiculo)comboBoxPlaca.SelectedItem);
 
-            if (!string.IsNullOrEmpty(txtBuscaPlaca.Text))
+
+            if (v != null)
             {
-                v.Placa = txtBuscaPlaca.Text;
                 s = ServicoDAO.VerificarServicoAbertoPorPlacaVeiculo(v);
 
                 if (s != null)
@@ -127,7 +130,6 @@ namespace Estacionamento.View
             lbMarca.Content = "";
             lbModelo.Content = "";
             lbVaga.Content = "";
-            txtBuscaPlaca.Focus();
         }
 
         private void Remover(object sender, RoutedEventArgs e)

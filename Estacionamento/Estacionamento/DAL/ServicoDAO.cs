@@ -34,7 +34,7 @@ namespace Estacionamento.DAL
                             Include("Veiculo.Modelo").
                             Include("Veiculo.Modelo.Marca").
                             Include("Cliente").
-                            SingleOrDefault(x => x.Veiculo.Placa.Equals(v.Placa) );
+                            SingleOrDefault(x => x.Veiculo.Placa.Equals(v.Placa));
         }
 
         public static Servico VerificarServicoAbertoPorPlacaVeiculo(Veiculo v)
@@ -44,7 +44,7 @@ namespace Estacionamento.DAL
                             Include("Veiculo.Modelo").
                             Include("Veiculo.Modelo.Marca").
                             Include("Cliente").
-                            SingleOrDefault(x => (x.Veiculo.Placa.Equals(v.Placa) && x.DataFim == null));
+                            SingleOrDefault(x => (x.Veiculo.Placa.Equals(v.Placa) && (x.DataFim == null)));
         }
 
 

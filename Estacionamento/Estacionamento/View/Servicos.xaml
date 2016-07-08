@@ -16,10 +16,10 @@
         <Label Content="Marca:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="10,87,0,0" RenderTransformOrigin="0.604,-0.538"/>
         <Label Content="Vaga:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="10,143,0,0" RenderTransformOrigin="0.604,-0.538"/>
         <Label Content="Duração (horas):" HorizontalAlignment="Left" VerticalAlignment="Top" Width="98" Margin="10,171,0,0" RenderTransformOrigin="0.604,-0.538"/>
-        <Label x:Name="lbDuracao" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Margin="113,171,0,0" RenderTransformOrigin="0.604,-0.538"/>
-        <Label x:Name="lbVaga" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="108,143,0,0" RenderTransformOrigin="0.604,-0.538"/>
-        <Label x:Name="lbModelo" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="108,115,0,0" RenderTransformOrigin="0.604,-0.538"/>
-        <Label x:Name="lbMarca" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="108,87,0,0" RenderTransformOrigin="0.604,-0.538"/>
-        <Label x:Name="lbCliente" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="108,59,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label x:Name="lbDuracao" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="334" Margin="113,171,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label x:Name="lbVaga" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Margin="108,143,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label x:Name="lbModelo" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Margin="108,115,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label x:Name="lbMarca" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Margin="108,87,0,0" RenderTransformOrigin="0.604,-0.538"/>
+        <Label x:Name="lbCliente" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Margin="108,59,0,0" RenderTransformOrigin="0.604,-0.538"/>
     </Grid>
 </Window>

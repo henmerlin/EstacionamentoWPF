@@ -85,7 +85,7 @@ namespace Estacionamento.View
                     lbCliente.Content = s.Cliente.Nome;
                     lbMarca.Content = s.Veiculo.Modelo.Marca.Nome;
                     lbModelo.Content = s.Veiculo.Modelo.Nome;
-                    lbVaga.Content = s.Vaga.Id + " " + s.Vaga.Referencia;
+                    lbVaga.Content = s.Vaga.Id + " - Referência: " + s.Vaga.Referencia;
                     lbDuracao.Content = Math.Round((DateTime.Now - s.DataInicio).TotalHours, 3);
                     HabilitarBotoes();
                 }
